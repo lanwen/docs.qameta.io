@@ -1,0 +1,24 @@
+{% assign section_id = include.id | replace:'/','_' %}
+
+<ul id="{{ section_id }}" class="{% if item.items != null %}collapse list-group-submenu{% endif %}">
+    {% for item in include.items %}
+    {% assign item_url = item.name | prepend: "/" | prepend: include.version | prepend:"/allure/" |append:"/" %}
+    {% assign item_page = site.allure | where:"url", item_url | first %}
+
+    <li class="{% if item.items | size %}panel{% endif %}">
+
+        {% if item.items | size %}
+        {% assign section_id = item.name | replace:'/','_' %}
+        <a href="#{{ section_id }}" class="active collapsed" data-toggle="collapse">
+            {{ item_page.title }}
+            <i class="pull-right fa fa-angle-down"></i>
+            <i class="pull-right fa fa-angle-up"></i>
+        </a>
+        {% include sidebar_item.html version=1.4 id=item.name items=item.items %}
+        {% else %}
+        <a class="dropdown-toggle" href="{{ item_page.url }}">{{ item_page.title }}</a>
+        {% endif %}
+    </li>
+
+    {% endfor %}
+</ul>

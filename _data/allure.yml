@@ -1,0 +1,8 @@
+- name: index
+
+- name: installation
+  items:
+    - name: installation/windows
+      items:
+        - name: installation/windows
+    - name: installation/macos
