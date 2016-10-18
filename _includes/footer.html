@@ -1,9 +1,15 @@
 <footer>
-    <div class="copyright pull-left">Copyright &copy; 2016 <a href="http://qameta.io">Qameta IO</a>.
-        All Rights Reserved.
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright pull-left">
+                    Copyright &copy; {{ 'now' | date: "%Y" }} Qameta IO. All Rights Reserved.
+                </div>
+                <a class="btn btn-primary pull-right"
+                   href="https://github.com/qameta/docs.qameta.io/tree/master/{{page.path }}">
+                    Edit this page <i class="fa fa-pencil"></i>
+                </a>
+            </div>
+        </div>
     </div>
-    <a class="btn btn-primary pull-right"
-       href="https://github.com/qameta/docs.qameta.io/tree/master/{{page.path }}">
-        Edit this page <i class="fa fa-pencil"></i>
-    </a>
 </footer>

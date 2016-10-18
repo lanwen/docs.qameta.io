@@ -1,0 +1,25 @@
+{% assign has_children = node.section.size != 0 %}
+
+<ul id="{{ id }}" class="nav {% if has_children %}collapse list-group-submenu{% endif %}">
+    {% for node in tree %}
+
+    {% assign node_url = node.path | prepend: page.version| prepend: "/" | prepend: page.product | prepend: "/" %}
+    {% assign node_page = site.pages | where: "url", node_url | first %}
+
+    {% if node.section | size %}
+    <li class="{% if has_children %}panel{% endif %}">
+        {% assign id = node.path | replace:'/','_' %}
+        <a href="#{{ id }}" class="active collapsed" data-toggle="collapse">
+            {{ node_page.title }}
+        </a>
+        {% assign tree = node.section %}{% include tree.html %}
+    </li>
+    {% else %}
+    <li>
+        <a href="{{ node_page.url }}" class="{% if node.path == page.url %}active currentPage{% endif %}">
+            {{node_page.title }}
+        </a>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>

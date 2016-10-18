@@ -1,6 +1,7 @@
 ---
 title: Installation on Mac Os
-layout: allure
+layout: docs
+product: allure
 version: 1.4
 ---
 

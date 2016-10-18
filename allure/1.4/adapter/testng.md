@@ -1,0 +1,144 @@
+---
+title: TestNG
+layout: docs
+product: allure
+version: 1.4
+---
+
+
+# TestNG
+
+An Allure report can be generated for any TestNG test. In order to get test results, you need to:
+
+* Add AllureTestListener to TestNG settings.
+* Add AspectJ Weaver dependency and its properties.
+* Run tests.
+
+## Maven
+
+See the example project: https://github.com/allure-examples/allure-testng-example
+
+You need to add the following to your **pom.xml**:
+```xml
+<properties>
+    <aspectj.version>1.7.4</aspectj.version>
+    <allure.version>{latest-allure-version}</allure.version>
+</properties>
+
+<dependencies>
+    <dependency>
+        <groupId>ru.yandex.qatools.allure</groupId>
+        <artifactId>allure-testng-adaptor</artifactId>
+        <version>${allure.version}</version>
+    </dependency>
+</dependencies>
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.14</version>
+            <configuration>
+                <testFailureIgnore>false</testFailureIgnore>
+                <argLine>
+                    -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+                </argLine>
+                <!--only for 1.3.* TestNG adapters. Since 1.4.0.RC4, the listener adds via ServiceLoader-->
+                <properties>
+                    <property>
+                        <name>listener</name>
+                        <value>ru.yandex.qatools.allure.testng.AllureTestListener</value>
+                    </property>
+                </properties>
+            </configuration>
+            <dependencies>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                    <version>${aspectj.version}</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+    </plugins>
+</build>
+```
+Then run the build as usual:
+```bash
+$ mvn clean test
+```
+
+## Ant
+
+See the example project: https://github.com/allure-examples/allure-ant-testng-example
+
+You need to declare the following dependencies in **ivy.xml**:
+```xml
+<dependencies>
+        <dependency org="ru.yandex.qatools.allure" name="allure-testng-adaptor" rev="1.3.9"/>
+        <dependency org="org.aspectj" name="aspectjweaver" rev="1.7.4"/>
+</dependencies>
+```
+Then add the following target to **build.xml**:
+```xml
+<property name="build.report" location="${build}/report"/>
+<property name="aspectj.version" value="1.7.4"/>
+<property name = "ivy.lib.dir" value="${basedir}/lib" />
+<path id="lib.path.id">
+  <fileset dir="${ivy.lib.dir}" />
+</path>
+<target name="test" depends="test-compile" description="Run the tests">
+    <taskdef name="testng" classname="org.testng.TestNGAntTask">
+        <classpath>
+            <path refid="lib.path.id"/>
+        </classpath>
+    </taskdef>
+    <testng workingDir="${build.report}" outputdir="${build.report}" listeners="ru.yandex.qatools.allure.testng.AllureTestListener">
+        <jvmarg value="-javaagent:${ivy.lib.dir}/aspectjweaver-${aspectj.version}.jar"/>
+        <classpath>
+            <pathelement location="${build.compile}"/>
+            <pathelement location="${build.test-compile}"/>
+            <path refid="lib.path.id"/>
+        </classpath>
+        <classfileset dir="${build.test-compile}" includes="**/*.class" />
+    </testng>
+</target>
+```
+Don't forget to specify **build.test-compile** and **build.compile** properties pointing to your software source code and test *.class files, respectively. Then launch the build as usual:
+```bash
+$ ant
+```
+
+## Gradle
+
+See the example project: https://github.com/allure-framework/allure-gradle-testng-example
+
+You need to add the following to **build.gradle**:
+```groovy
+configurations {
+    agent
+}
+
+dependencies {
+    agent "org.aspectj:aspectjweaver:${aspectjVersion}"
+    testCompile "ru.yandex.qatools.allure:allure-testng-adaptor:${allureVersion}"
+}
+
+
+test.doFirst {
+    jvmArgs "-javaagent:${configurations.agent.singleFile}"
+}
+
+test {
+    useTestNG()
+}
+```
+You should also specify the Allure and Aspectj versions in **gradle.properties**:
+```
+aspectjVersion=1.8.0
+allureVersion=1.4.0.RC4
+```
+Finally, to output Allure results to the **build** directory (the default is **target/allure-results**), you need to put the **allure.properties** file in **src/test/resources/**:
+```
+allure.results.directory=build/allure-results
+```

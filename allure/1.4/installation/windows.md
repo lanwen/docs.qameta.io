@@ -1,6 +1,7 @@
 ---
 title: Installation on Windows
-layout: allure
+layout: docs
+product: allure
 version: 1.4
 ---
 

@@ -1,11 +1,8 @@
 ---
 title: Overview
-layout: allure
+layout: docs
+product: allure
 version: 1.4
-lang: en
-redirect_from:
-  - allure/
-  - allure/latest/
 ---
 
 ## Overview of Allure

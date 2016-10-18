@@ -1,8 +1,7 @@
-- name: index
-
-- name: installation
-  items:
-    - name: installation/windows
-      items:
-        - name: installation/windows
-    - name: installation/macos
+toc:
+  - path: /
+    section:
+      - path: /adapter/
+        section:
+          - path: /adapter/junit/
+          - path: /adapter/testng/

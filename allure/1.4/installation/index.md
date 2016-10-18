@@ -1,8 +1,8 @@
 ---
 title: Install
-layout: allure
+layout: docs
+product: allure
 version: 1.4
-lang: en
 ---
 
 ## Installation
