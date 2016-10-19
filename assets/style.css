@@ -53,6 +53,10 @@
     background: rgba(0,0,0,.07);
 }
 
+.docs-sidebar ul.sidebar ul.articles {
+    padding-left: 20px;
+}
+
 .docs-body {
     position: absolute;
     left: 300px;

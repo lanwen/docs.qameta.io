@@ -9,3 +9,9 @@ toc:
     section:
       - path: /adapter/junit/
       - path: /adapter/testng/
+  - path: /unsorted/
+    section:
+      - path: /unsorted/jenkins/
+      - path: /unsorted/bamboo/
+      - path: /unsorted/teamcity/
+
