@@ -1,8 +1,7 @@
 name: Qameta Documentation
 description: Documentation for Qameta tools
 
-URL: https://docs.qameta.io
-baseurl: ""
+url: https://qameta.io
 
 markdown: kramdown
 highlighter: rouge
