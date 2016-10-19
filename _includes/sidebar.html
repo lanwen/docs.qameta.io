@@ -1,0 +1,10 @@
+<ul class="sidebar">
+    <li class="divider"></li>
+    <li>
+        <a class="navbar-brend" href="#">
+            {{ site.data[page.product].name }}
+        </a>
+    </li>
+    <li class="divider"></li>
+    {% assign tree = site.data[page.product].toc %}{% include tree.html %}
+</ul>

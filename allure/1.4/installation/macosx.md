@@ -5,4 +5,4 @@ product: allure
 version: 1.4
 ---
 
-## Mac OS
+# Installation on Mac OS X

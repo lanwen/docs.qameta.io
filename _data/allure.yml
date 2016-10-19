@@ -1,7 +1,11 @@
+name: Allure Docs
 toc:
   - path: /
+  - path: /installation/
     section:
-      - path: /adapter/
-        section:
-          - path: /adapter/junit/
-          - path: /adapter/testng/
+      - path: /installation/macosx/
+      - path: /installation/windows/
+  - path: /adapter/
+    section:
+      - path: /adapter/junit/
+      - path: /adapter/testng/

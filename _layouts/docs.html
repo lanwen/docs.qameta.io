@@ -2,15 +2,11 @@
 layout: default
 ---
 
-<div class="container-fluid">
-    <div class="row body">
-        <div class="col-sm-3">
-            {% assign tree = site.data[page.product].toc %}{% include tree.html %}
-        </div>
-        <div class="col-sm-9">
-            <div class="content">
-                {{ content }}
-            </div>
-        </div>
+<div class="docs-sidebar">
+    {% include sidebar.html %}
+</div>
+<div class="docs-body">
+    <div class="content">
+        {{ content }}
     </div>
 </div>

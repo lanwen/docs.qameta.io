@@ -1,11 +1,11 @@
 ---
-title: jUnit
+title: jUnit Adapter
 layout: docs
 product: allure
 version: 1.4
 ---
 
-# Junit
+# Junit Adapter
 
 An Allure report can be generated for any [JUnit](http://junit.org/) 4 test.
 **Warning: Allure only supports JUnit 4 or higher. You will get nothing with JUnit 3.**

@@ -1,25 +1,22 @@
 {% assign has_children = node.section.size != 0 %}
+{% for node in tree %}
 
-<ul id="{{ id }}" class="nav {% if has_children %}collapse list-group-submenu{% endif %}">
-    {% for node in tree %}
+{% assign node_url = node.path | prepend: page.version| prepend: "/" | prepend: page.product | prepend: "/" %}
+{% assign node_page = site.pages | where: "url", node_url | first %}
 
-    {% assign node_url = node.path | prepend: page.version| prepend: "/" | prepend: page.product | prepend: "/" %}
-    {% assign node_page = site.pages | where: "url", node_url | first %}
-
+<li class="{% if page.url == node_url %}active{% endif %}">
     {% if node.section | size %}
-    <li class="{% if has_children %}panel{% endif %}">
-        {% assign id = node.path | replace:'/','_' %}
-        <a href="#{{ id }}" class="active collapsed" data-toggle="collapse">
-            {{ node_page.title }}
-        </a>
+    {% assign id = node.path | replace:'/','_' %}
+    <a href="{{ node_page.url }}">
+        {{ node_page.title }}
+    </a>
+    <ul id="{{ id }}" class="articles">
         {% assign tree = node.section %}{% include tree.html %}
-    </li>
+    </ul>
     {% else %}
-    <li>
-        <a href="{{ node_page.url }}" class="{% if node.path == page.url %}active currentPage{% endif %}">
-            {{node_page.title }}
-        </a>
-    </li>
+    <a href="{{ node_page.url }}" class="{% if node.path == page.url %}active currentPage{% endif %}">
+        {{node_page.title }}
+    </a>
     {% endif %}
-    {% endfor %}
-</ul>
+</li>
+{% endfor %}

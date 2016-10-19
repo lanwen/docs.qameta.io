@@ -5,4 +5,4 @@ product: allure
 version: 1.4
 ---
 
-## Windows
+# Installation on Windows

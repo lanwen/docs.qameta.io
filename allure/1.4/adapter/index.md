@@ -5,7 +5,7 @@ product: allure
 version: 1.4
 ---
 
-## Adapters
+# Adapeters
 
 In this step, all information about running tests is saved to XML files with a predefined format. For this purpose, we provide so-called **adapters** - small libraries that are attached to particular test frameworks and know how to extract test information to XML. For more information, select one of the supported test frameworks:
 * [Codeception](https://github.com/allure-framework/allure-codeception)
