@@ -1,7 +1,6 @@
 name: Qameta Documentation
 description: Documentation for Qameta tools
-
-url: https://qameta.io
+url: https://docs.qameta.io
 
 markdown: kramdown
 highlighter: rouge
@@ -9,10 +8,3 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 permalink: pretty
-
-gems:
-  - jekyll-redirect-from
-
-collections:
-  allure:
-    output: true
