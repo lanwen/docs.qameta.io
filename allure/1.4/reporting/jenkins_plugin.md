@@ -79,7 +79,7 @@ When build is finished a link to Allure report will appear on the build page:
 
 ## Extensions  
 ### Job DSL Plugin  
-The [job-dsl-plugin](https://github.com/jenkinsci/job-dsl-plugin/wiki) allows the programmatic creation of projects using a DSL.
+The [job-dsl-plugin](https://github.com/jenkinsci/job-dsl-plugin/wiki) allows the programmatic creation of projects using a DSL.  
 ```  
 // default
 publishers {
@@ -98,4 +98,4 @@ publishers {
         property('allure.tests.management.pattern', 'http://tms.company.com/%s')
     }
 }
-```  
+```
