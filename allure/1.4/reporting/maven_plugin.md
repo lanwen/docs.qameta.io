@@ -73,6 +73,7 @@ The Allure Maven Plugin has three goals:
 ### Generate the Allure report as Part of Project Reports
 ```bash
 $ mvn site
+
 ```
 
 ### Generate the Allure Report in a Standalone Fashion
