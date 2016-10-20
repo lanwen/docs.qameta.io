@@ -42,7 +42,7 @@ Put **allure.properties** (**report.properties** for Allure 1.5 or above) to cla
 ```
 
 #### Or specify the *propertiesFilePath*
-```xlm
+```xml
 <configuration>
    <propertiesFilePath>path/to/your/allure.properties</propertiesFilePath>
 </configuration>
