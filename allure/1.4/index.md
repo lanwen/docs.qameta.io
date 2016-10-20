@@ -3,6 +3,9 @@ title: Overview
 layout: docs
 product: allure
 version: 1.4
+redirect_from:
+  - /allure/
+  - /allure/latest/
 ---
 
 ## Overview of Allure
