@@ -1,0 +1,23 @@
+---
+title: Features and Stories
+layout: docs
+product: allure
+version: 1.4
+---
+
+# Features and Stories
+
+You can group test results by features and stories (BDD-like)
+
+In order to group your tests by [features](https://github.com/allure-framework/allure-core/wiki/Glossary#feature) and [stories](https://github.com/allure-framework/allure-core/wiki/Glossary#user-story) in Java,\
+ simply annotate the test suite or test case with **@Features** or **@Stories** annotations. Each of these annotations can take either a single string or a string array, because one test case can relate to seve\
+ral [features](https://github.com/allure-framework/allure-core/wiki/Glossary#feature) or [stories](https://github.com/allure-framework/allure-core/wiki/Glossary#user-story):
+```java
+@Features("My Feature")
+@Stories({"Story1", "Story2"})
+@Test
+public void myTest() {
+    ...
+}
+```
+

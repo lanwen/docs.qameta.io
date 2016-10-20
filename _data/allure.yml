@@ -16,6 +16,15 @@ toc:
       - path: /reporting/jenkins_plugin/
       - path: /reporting/teamcity_plugin/
       - path: /reporting/bamboo_plugin/
+  - path: /features/
+    section:
+      - path: /features/steps/
+      - path: /features/attachments/
+      - path: /features/features_and_stories/
+      - path: /features/parameters/
+      - path: /features/environment/
+      - path: /features/issues/
+      - path: /features/testcase_id/
   - path: /unsorted/
     section:
       - path: /unsorted/jenkins/
