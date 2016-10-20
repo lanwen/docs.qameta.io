@@ -14,6 +14,7 @@ toc:
       - path: /reporting/command_line/
       - path: /reporting/maven_plugin/
       - path: /reporting/jenkins_plugin/
+      - path: /reporting/teamcity_plugin/
   - path: /unsorted/
     section:
       - path: /unsorted/jenkins/
