@@ -6,7 +6,7 @@ version: 1.4
 ---
 
 # Allure Jenkins Plugin
-{{page.images}}
+
 ## Installation
  1. Install [Allure Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Allure+Plugin) from "Plugin Manager Page".
  2. Open Plugin Advanced Settings (http://<jenkins_host>/pluginManager/advanced). 
@@ -19,7 +19,7 @@ version: 1.4
 By default, Jenkins sets Content Security Policy for plugin pages. Allure requires less strict policy, you can set it via system property.
 
 If you haven't done it before, add the following to Jenkins system properties configuration (you need to set both Hudson and Jenkins properties to make it works):  
-```
+```  
 "-Dhudson.model.DirectoryBrowserSupport.CSP=default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
 "-Djenkins.model.DirectoryBrowserSupport.CSP=default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
 ```  
@@ -72,3 +72,30 @@ You can read more about it in the [Jenkins](https://wiki.jenkins-ci.org/display/
  2. Find Allure Report configuration section. 
  3. Click "Advanced..." button if you need custom settings of commadline, jdk or build policy  
     ![install allure commanline](/{{page.product}}/{{page.version}}/img/jenkins_plugin_advanced_options.jpeg)
+
+## Usage  
+When build is finished a link to Allure report will appear on the build page:  
+![install allure commanline](/{{page.product}}/{{page.version}}/img/jenkins_plugin_allure_sidebar.png)![install allure commanline](/{{page.product}}/{{page.version}}/img/jenkins_plugin_allure_report.png)  
+
+## Extensions  
+### Job DSL Plugin  
+The [job-dsl-plugin](https://github.com/jenkinsci/job-dsl-plugin/wiki) allows the programmatic creation of projects using a DSL.
+```  
+// default
+publishers {
+    allure(['allure-results'])
+}
+ 
+// advanced
+publishers {
+    allure(['first-results', 'second-results']) {
+        jdk('java7')
+        commandline('1.4.18')
+ 
+        buildFor('UNSTABLE')
+        includeProperties(true)
+        property('allure.issues.tracker.pattern', 'http://tracker.company.com/%s')
+        property('allure.tests.management.pattern', 'http://tms.company.com/%s')
+    }
+}
+```  
