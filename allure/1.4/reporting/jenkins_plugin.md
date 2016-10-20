@@ -22,7 +22,7 @@ If you haven't done it before, add the following to Jenkins system properties co
 ```
 "-Dhudson.model.DirectoryBrowserSupport.CSP=default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
 "-Djenkins.model.DirectoryBrowserSupport.CSP=default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
-```
+```  
 You can read more about it in the [Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Configuring+Content+Security+Policy) docs and find details in [issue #715](https://github.com/allure-framework/allure-core/issues/715) in the Github repository of allure-core.
 
 ### Build agents have connection to maven central
