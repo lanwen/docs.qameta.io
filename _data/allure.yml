@@ -9,3 +9,8 @@ toc:
     section:
       - path: /adapter/junit/
       - path: /adapter/testng/
+  - path: /reporting/
+    section:
+      - path: /reporting/command_line/
+      - path: /reporting/maven_plugin/
+      - path: /reporting/jenkins_plugin/
