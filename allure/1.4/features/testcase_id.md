@@ -5,8 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Test Case ID
-
 > This feature is supported **since Allure 1.4.6**.
 
 **Test Case ID** is reference to test case in so-called [Test Management System](https://en.wikipedia.org/wiki/Test_management) (TMS). It is not allowed to have more than one reference per test case by definition.

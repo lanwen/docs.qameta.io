@@ -5,8 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Attachments
-
 An attachment in Java code is simply a method annotated with **@Attachment** that returns either a **String** or **byte[]**, which should be added to the report:
 ```java
 @Attachment

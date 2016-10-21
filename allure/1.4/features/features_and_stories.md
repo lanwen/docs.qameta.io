@@ -5,8 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Features and Stories
-
 You can group test results by features and stories (BDD-like)
 
 In order to group your tests by [features](https://github.com/allure-framework/allure-core/wiki/Glossary#feature) and [stories](https://github.com/allure-framework/allure-core/wiki/Glossary#user-story) in Java,\

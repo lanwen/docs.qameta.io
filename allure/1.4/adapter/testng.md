@@ -5,9 +5,6 @@ product: allure
 version: 1.4
 ---
 
-
-# TestNG Adapter
-
 An Allure report can be generated for any TestNG test. In order to get test results, you need to:
 
 * Add AllureTestListener to TestNG settings.

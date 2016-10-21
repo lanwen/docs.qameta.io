@@ -5,8 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Generating a report
-
 Once the XML files have been created by the adapter, you can generate an Allure report using one of the following tools:
  * Use [Allure Command Line Tool](http://wiki.qatools.ru/display/AL/Allure+Commandline) to generate a report by running a console command.
  * Use [Allure Jenkins Plugin](http://wiki.qatools.ru/display/AL/Allure+Jenkins+Plugin) to generate a report as a [Jenkins](http://jenkins-ci.org/) job artifact.

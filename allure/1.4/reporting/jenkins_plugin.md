@@ -5,8 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Allure Jenkins Plugin
-
 ## Installation
  1. Install [Allure Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Allure+Plugin) from "Plugin Manager Page".
  2. Open Plugin Advanced Settings (http://<jenkins_host>/pluginManager/advanced). 

@@ -5,8 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Allure TeamCity Plugin
-
 ## Installation
  1. [Install Allure TeamCity plugin](https://confluence.jetbrains.com/display/TCD9/Installing+Additional+Plugins).
 Copy the **allure-commandline.zip** from [latest release](https://github.com/allure-framework/allure-core/releases/latest) to the <[TeamCity Data Directory](https://confluence.jetbrains.com/display/TCD9/TeamCity+Data+Directory)>/plugins/.tools directory. No server restart needed for this step.

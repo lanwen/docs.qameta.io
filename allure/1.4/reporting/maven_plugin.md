@@ -5,8 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Allure Maven Plugin
-
 ## Installation
 Add allure-maven-plugin to your pom.xml file.
 ```xml

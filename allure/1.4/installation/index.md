@@ -5,4 +5,3 @@ product: allure
 version: 1.4
 ---
 
-# Installation

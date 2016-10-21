@@ -5,8 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Issues
-
 > This feature is supported **since Allure 1.4.1**.
 
 **Issues** are any software problems that are stored in so-called [issue trackers](http://en.wikipedia.org/wiki/Issue_tracking_system). When any of these problems is fixed, a test should be created to prevent it from appearing in the future. 

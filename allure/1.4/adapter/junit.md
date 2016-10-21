@@ -5,8 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Junit Adapter
-
 An Allure report can be generated for any [JUnit](http://junit.org/) 4 test.
 **Warning: Allure only supports JUnit 4 or higher. You will get nothing with JUnit 3.**
 In order to get test results, you need to:

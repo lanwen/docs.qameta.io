@@ -1,6 +1,6 @@
 name: Qameta Documentation
 description: Documentation for Qameta tools
-url: https://docs.qameta.io
+url: http://localhost:4000
 
 markdown: kramdown
 highlighter: rouge

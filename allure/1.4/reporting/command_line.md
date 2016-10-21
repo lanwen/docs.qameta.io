@@ -5,7 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Allure Commandline
 Using Allure command line tool you can generate the report from existing Allure results.
 
 ## Installation

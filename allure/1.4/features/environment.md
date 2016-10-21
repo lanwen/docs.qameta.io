@@ -5,8 +5,6 @@ product: allure
 version: 1.4
 ---
 
-# Environment
-
 Allure allows you to add test **environment** values such as *report name*, *browser* or *test server address*:
 ![environment](/{{page.product}}/{{page.version}}/img/environment.png)
 
