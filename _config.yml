@@ -7,8 +7,9 @@ kramdown:
   input: GFM
   eanble_coderay: true
   syntax_highlighter: coderay
-  syntax_highlighter_opts:
-    coderay_line_numbers: nil
+  coderay_line_numbers: nil
+  coderay_auto_ids: false
+  coderay_css: class
 
 permalink: pretty
 
