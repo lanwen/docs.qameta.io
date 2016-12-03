@@ -9,5 +9,9 @@ kramdown:
   syntax_highlighter: rouge
 permalink: pretty
 
+sass:
+  style: compressed
+
 gems:
   - jekyll-redirect-from
+  - jekyll-asciidoc

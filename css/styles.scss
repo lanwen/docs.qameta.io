@@ -1,0 +1,17 @@
+---
+---
+
+@import "asciidoctor";
+@import "sidebar";
+
+body {
+  padding-left: 300px;
+}
+
+.content {
+  position: relative;
+  max-width: 1000px;
+
+  padding: 0 20px;
+  margin: 0 auto;
+}

@@ -1,8 +1,10 @@
-# Idea files
+# Idea
 .idea
 
-Jekyll files
+# Jekyll
+.sass-cache
 _site
 
-# emacs
-*~
+# Ruby
+Gemfile.lock
+
