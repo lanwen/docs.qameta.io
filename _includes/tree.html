@@ -4,13 +4,13 @@
 {% assign node_url = node.path | prepend: page.version| prepend: "/" | prepend: page.product | prepend: "/" %}
 {% assign node_page = site.pages | where: "url", node_url | first %}
 
-<li class="{% if page.url == node_url %}active{% endif %}">
+<li class="list__item {% if page.url == node_url %}active{% endif %}">
     {% if node.section | size %}
     {% assign id = node.path | replace:'/','_' %}
     <a href="{{ node_page.url }}">
         {{ node_page.title }}
     </a>
-    <ul id="{{ id }}" class="articles">
+    <ul id="{{ id }}" class="list">
         {% assign tree = node.section %}{% include tree.html %}
     </ul>
     {% else %}

@@ -1,5 +1,5 @@
 ---
-title: jUnit Adapter
+title: jUnit
 layout: docs
 product: allure
 version: 1.4

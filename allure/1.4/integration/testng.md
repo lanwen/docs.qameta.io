@@ -1,5 +1,5 @@
 ---
-title: TestNG Adapter
+title: TestNG
 layout: docs
 product: allure
 version: 1.4

@@ -1,14 +1,15 @@
 name: Allure Framework
 toc:
   - path: /
-  - path: /installation/
+  - path: /quickstart/
     section:
-      - path: /installation/macosx/
-      - path: /installation/windows/
-  - path: /adapter/
+      - path: /quickstart/installation/
+      - path: /quickstart/run-your-tests/
+      - path: /quickstart/generate-report/
+  - path: /integration/
     section:
-      - path: /adapter/junit/
-      - path: /adapter/testng/
+      - path: /integration/junit/
+      - path: /integration/testng/
   - path: /reporting/
     section:
       - path: /reporting/command_line/

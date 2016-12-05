@@ -3,16 +3,52 @@
 
 @import "asciidoctor";
 @import "coderay";
-@import "sidebar";
 
 body {
   padding-left: 300px;
 }
 
-.content {
+.docs-body {
   position: relative;
   max-width: 1000px;
 
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.docs-sidebar {
+  margin-top: 0 !important;
+  position: fixed;
+  display: block;
+
+  bottom: 0;
+  left: 0;
+  top: 0;
+
+  z-index: 1;
+
+  overflow-y: auto;
+  width: 300px;
+
+  border-right: 1px solid rgba(0, 0, 0, .07);
+  background: #f8f8f7;
+}
+
+.list {
+  padding: 0;
+  margin-left: 20px;
+
+  list-style-type: none;
+
+  &__item {
+    > a {
+      text-decoration: none;
+      padding: 5px 0;
+      display: block;
+    }
+
+    & .active > a {
+      color: #a53221;
+    }
+  }
 }
