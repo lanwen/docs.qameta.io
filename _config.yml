@@ -25,3 +25,7 @@ exclude:
   - Gemfile.lock
   - Gemfile
   - README.md
+
+metrcs:
+  yandex: "38078235"
+  google: ''

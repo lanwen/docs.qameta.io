@@ -3,6 +3,6 @@
         <li class="list__item">
             <h3>{{ site.data[page.product].name }}</h3>
         </li>
-        {% assign tree = site.data[page.product].toc %}{% include tree.html %}
+        {% assign tree = site.data[page.product].toc %}{% include docs/toc.html %}
     </ul>
 </div>

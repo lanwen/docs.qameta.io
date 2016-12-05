@@ -1,0 +1,20 @@
+<ul class="list">
+    {% for node in tree %}
+
+    {% assign node_url = node.path | prepend: page.version| prepend: "/" | prepend: page.product | prepend: "/" %}
+    {% assign node_page = site.pages | where: "url", node_url | first %}
+
+    <li class="list__item {% if page.url == node_url %}active{% endif %}">
+        {% if node.section | size %}
+        <a href="{{ node_page.url }}">
+            {{ node_page.title }}
+        </a>
+        {% assign tree = node.section %}{% include docs/toc.html %}
+        {% else %}
+        <a href="{{ node_page.url }}" class="{% if node.path == page.url %}active currentPage{% endif %}">
+            {{ node_page.title }}
+        </a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
