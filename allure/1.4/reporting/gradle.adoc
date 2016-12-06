@@ -65,52 +65,36 @@ allure {
 
 == Configuration
 
-* `aspectjweaver` (boolean) default false.
-Adds `-javaagent` to tests
+* `aspectjweaver` (boolean) default false. Adds `-javaagent` to tests
 
-* `junit` (boolean) default false.
-Enables allure for junit without @RunWith usage. 
-(Adds https://github.com/d10xa/allure-junit-aspectj-adaptor[allure-junit-aspectj-adaptor]) based on AspectJ. 
-Require `aspectjweaver`
+* `junit` (boolean) default false. Enables allure for junit without @RunWith usage. 
+(Adds https://github.com/d10xa/allure-junit-aspectj-adaptor[allure-junit-aspectj-adaptor]) based on AspectJ. Require `aspectjweaver`
 
-* `testNG` (boolean) default false.
-Enables allure for testNG. 
-Require `aspectjweaver`
+* `testNG` (boolean) default false. Enables allure for testNG. Require `aspectjweaver`
 
-* `spock` (boolean) default false.
-Enables allure for spock. 
+* `spock` (boolean) default false. Enables allure for spock. 
 
-* `geb` (boolean) default false.
-Adds https://github.com/d10xa/allure-spock-geb[allure-spock-geb]
-dependency for screenshot and html attachments.
-Specifications must extend geb.spock.GebReportingSpec class
+* `geb` (boolean) default false. Adds https://github.com/d10xa/allure-spock-geb[allure-spock-geb] dependency for
+screenshot and html attachments. Specifications must extend geb.spock.GebReportingSpec class
 
-* `allureResultsDir` (string) default "$buildDir/allure-results".
-Test results will be placed to this directory. 
+* `allureResultsDir` (string) default "$buildDir/allure-results". Test results will be placed to this directory. 
 
-* `allureReportDir` (string) default "$buildDir/allure-report".
-Html report will be generated to this directory 
+* `allureReportDir` (string) default "$buildDir/allure-report". Html report will be generated to this directory 
 (if task's property `to` not defined) 
 
-* `allureVersion` (string). 
-Version of allure-bundle and allure-adaptors
+* `allureVersion` (string).  Version of allure-bundle and allure-adaptors
 
-* `aspectjVersion` (string).
-Version of `org.aspectj:aspectjweaver`
+* `aspectjVersion` (string). Version of `org.aspectj:aspectjweaver`
 
-* `allureSpockGebExtensionVersion` (string).
-Version of [allure-spock-geb](https://github.com/d10xa/allure-spock-geb)
+* `allureSpockGebExtensionVersion` (string). Version of https://github.com/d10xa/allure-spock-geb[allure-spock-geb]
 
-* `allureJunitAspectjAdaptorVersion` (string).
-Version of [allure-junit-aspectj-adaptor](https://github.com/d10xa/allure-junit-aspectj-adaptor)
+* `allureJunitAspectjAdaptorVersion` (string). Version of
+https://github.com/d10xa/allure-junit-aspectj-adaptor[allure-junit-aspectj-adaptor]
 
-* `configuration` (string) default 'testCompile'.
-Apply adaptors to this configuration. 
-For example, you can select the configuration 'compile' 
-and use the adaptor classes in your source code.
+* `configuration` (string) default 'testCompile'. Apply adaptors to this configuration. For example, you can select
+the configuration 'compile' and use the adaptor classes in your source code.
 
-* `clean` (boolean) default true.
-Execute appropriate clean tasks before tests and report generation.
+* `clean` (boolean) default true. Execute appropriate clean tasks before tests and report generation.
 
 == Tasks
 
