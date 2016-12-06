@@ -31,7 +31,7 @@ pytest_plugins = 'allure.pytest_plugin',\
 == Allure Features
 
 
-== Attachments
+=== Attachments
 
 To attach some content to test report:
 
@@ -43,7 +43,7 @@ def test_foo():
     allure.attach('my attach', 'Hello, World')
 ----
 
-== Steps
+=== Steps
 
 To divide a test into steps:
 
@@ -111,7 +111,7 @@ Arguments are passed to `format` method in the same way they are passed to the d
 
 Steps support is limited when used with fixtures.
 
-== Severity
+=== Severity
 
 Any test, class or module can be marked with different severity:
 
@@ -144,7 +144,7 @@ To run tests with concrete priority:
 py.test my_tests/ --allure_severities=critical,blocker
 ----
 
-== Issues
+=== Issues
 
 Issues can be set for test.
 
@@ -176,7 +176,7 @@ class TestBar:
         pass
 ----
 
-== Test cases
+=== Test cases
 
 Test cases links can be set for test also.
 
@@ -206,7 +206,7 @@ class TestBar:
         pass
 ----
 
-==Features & Stories
+=== Features & Stories
 
 Feature and Story can be set for test.
 
@@ -239,7 +239,7 @@ py.test my_tests/ --allure_features=feature1,feature2
 py.test my_tests/ --allure_features=feature1,feature2 --allure_stories=story1,story2
 ----
 
-== Environment Parameters
+=== Environment Parameters
 
 You can provide test environment parameters such as report name, browser or test server address to allure test report.
 
