@@ -5,3 +5,45 @@
 :page-version: 1.4
 :page-product: allure
 :source-highlighter: coderay
+
+== Allure Bamboo Plugin
+
+This repository contains source code of Allure plugin for
+https://www.atlassian.com/software/bamboo[Atlassian Bamboo CI].
+It allows you to generate Allure report from
+https://github.com/allure-framework/allure-core/wiki#gathering-information-about-tests[existing Allure XML files].
+
+== Building and Installing
+
+=== Short way
+
+Download precompiled JAR from https://github.com/allure-framework/allure-bamboo-plugin/releases[releases page]
+and install it manually as described
+https://confluence.atlassian.com/display/UPM/Installing+add-ons#Installingadd-ons-Installingbyfileupload[here]. We use JDK 1.7+ to compile the plugin so be sure to use Java 1.7+
+for running Bamboo.
+
+=== Long way
+
+. Set up Atlassian plugin SDK as described
+https://developer.atlassian.com/display/DOCS/Set+up+the+Atlassian+Plugin+SDK+and+Build+a+Project[here].
+. Clone this repository
+. Run `$ atlas-run`
+. Access http://localhost:6990/bamboo/ to view development instance of Bamboo
+. Verify that plugin is working as expected
+. Install *target/allure-bamboo-plugin-VERSION.jar* manually as described
+https://confluence.atlassian.com/display/UPM/Installing+add-ons#Installingadd-ons-Installingbyfileupload[here].
+
+== Configuration and Usage
+
+When installed this plugin provides a new task called *Allure*. To use it configure your build as follows:
+
+. Add Allure task to your job:
++
+image::bamboo_add_task.png[Add Task in Bamboo]
+. Configure task - specify glob pattern to the folder where Allure should search for XML files and desired
+report version to be used:
++
+image::bamboo_task_fields.png[Task configuration]
+. Run the build as usually and click on Allure report artifact on the *Artifacts* tab:
++
+image::bamboo_view_artifact.png[Allure artifact]
