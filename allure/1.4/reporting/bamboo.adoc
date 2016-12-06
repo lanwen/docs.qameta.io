@@ -1,0 +1,7 @@
+= Bamboo
+:icons: font
+:imagesdir: /allure/1.4/img/
+:page-layout: docs
+:page-version: 1.4
+:page-product: allure
+:source-highlighter: coderay

@@ -36,7 +36,7 @@ After installation you will have allure command available.
 Read more about https://github.com/allure-framework/allure-debian[Allure Debian Package].
 
 == Windows and other Unix
- * Download the latest version as zip archive from https://github.com/allure-framework/allure-core/releases/latest[GitHub].
- * Unpack the archive to **allure-commandline** directory.
- * Navigate to **bin** directory.
- * Use **allure.bat** for Windows and **allure** for other Unix platforms.
+* Download the latest version as zip archive from https://github.com/allure-framework/allure-core/releases/latest[GitHub].
+* Unpack the archive to **allure-commandline** directory.
+* Navigate to **bin** directory.
+* Use **allure.bat** for Windows and **allure** for other Unix platforms.
