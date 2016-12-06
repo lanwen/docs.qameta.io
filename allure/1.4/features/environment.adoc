@@ -1,0 +1,45 @@
+= Environment
+:icons: font
+:imagesdir: /allure/1.4/img/
+:page-layout: docs
+:page-version: 1.4
+:page-product: allure
+:source-highlighter: coderay
+
+WARNING: This page under active development...
+
+Allure allows you to add test *environment* values such as *report name*, *browser* or *test server address*:
+image::environment.png[Environment]
+
+== Usage
+
+There are several ways to add the environment to your report:
+
+* Save the file *environment.xml* in the following format to the Allure results directory:
++
+[source, xml]
+----
+<qa:environment xmlns:qa="urn:model.commons.qatools.yandex.ru">
+    <id>2a54c4d7-7d79-4615-b80d-ffc1107016a1</id>
+    <name>Allure sample test pack</name>
+    <parameter>
+        <name>Browser</name>
+        <key>my.properties.browser</key>
+        <value>Firefox</value>
+    </parameter>
+    <parameter>
+        <name>Test stand</name>
+        <key>my.properties.url</key>
+        <value>http://yandex.ru</value>
+    </parameter>
+</qa:environment>  
+----
+* Add the properties file **environment.properties** to the Allure results directory:
++
+[source]
+----
+my.properties.browser=Firefox
+my.properties.url=http://yandex.ru
+----
+
+All specified properties will be shown on the *Overview* page.

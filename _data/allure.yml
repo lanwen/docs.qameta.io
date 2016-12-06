@@ -33,6 +33,7 @@ toc:
       - path: /reporting/jenkins/
       - path: /reporting/bamboo/
       - path: /reporting/maven/
+      - path: /reporting/gradle/
   - path: /features/
     section:
       - path: /features/steps/
