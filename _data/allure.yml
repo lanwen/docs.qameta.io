@@ -12,8 +12,9 @@ toc:
       - path: /integration/testng/
   - path: /reporting/
     section:
-      - path: /reporting/jenkins/
+      - path: /reporting/commandline/
       - path: /reporting/teamcity/
+      - path: /reporting/jenkins/
       - path: /reporting/bamboo/
       - path: /reporting/maven/
   - path: /features/
