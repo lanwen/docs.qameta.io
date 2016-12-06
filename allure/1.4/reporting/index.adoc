@@ -1,0 +1,16 @@
+= Reporting
+:icons: font
+:imagesdir: /allure/1.4/img/
+:page-layout: docs
+:page-version: 1.4
+:page-product: allure
+:source-highlighter: coderay
+
+Once the XML files have been created by the adapter, you can generate an Allure report using one of the following tools:
+
+* Use http://wiki.qatools.ru/display/AL/Allure+Commandline[Allure Command Line Tool] to generate a report by running a console command.
+* Use http://wiki.qatools.ru/display/AL/Allure+Jenkins+Plugin[Allure Jenkins Plugin] to generate a report as a http://jenkins-ci.org[Jenkins] job artifact.
+* Use http://wiki.qatools.ru/display/AL/Allure+TeamCity+Plugin[Allure Teamcity Plugin] to generate a report as a http://www.jetbrains.com/teamcity[Teamcity] job artifact.
+* Use https://github.com/allure-framework/allure-bamboo-plugin[Allure Bamboo Plugin] to generate a report as an https://www.atlassian.com/software/bamboo[Atlassian Bamboo] plan artifact.
+* Use http://wiki.qatools.ru/display/AL/Allure+Maven+Plugin[Allure Maven Plugin] to generate a report during a Maven build.
+* Use https://github.com/d10xa/gradle-allure-plugin[Gradle Allure Plugin] to generate a report by running Gradle task.
