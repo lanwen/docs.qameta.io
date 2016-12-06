@@ -10,6 +10,15 @@ toc:
     section:
       - path: /integration/junit/
       - path: /integration/testng/
+      - path: /integration/mstest/
+      - path: /integration/nose/
+      - path: /integration/nunit/
+      - path: /integration/phpunit/
+      - path: /integration/pytest/
+      - path: /integration/rspec/
+      - path: /integration/scalatest/
+      - path: /integration/specs/
+      - path: /integration/spock/
       - path: /integration/codeception/
       - path: /integration/cucumber/
       - path: /integration/cucumberjs/
@@ -19,8 +28,9 @@ toc:
       - path: /integration/mocha/
   - path: /reporting/
     section:
-      - path: /reporting/jenkins/
+      - path: /reporting/commandline/
       - path: /reporting/teamcity/
+      - path: /reporting/jenkins/
       - path: /reporting/bamboo/
       - path: /reporting/maven/
   - path: /features/
