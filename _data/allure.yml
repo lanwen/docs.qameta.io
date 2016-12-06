@@ -10,6 +10,13 @@ toc:
     section:
       - path: /integration/junit/
       - path: /integration/testng/
+      - path: /integration/codeception/
+      - path: /integration/cucumber/
+      - path: /integration/cucumberjs/
+      - path: /integration/cucumberjvm/
+      - path: /integration/jasmine/
+      - path: /integration/karma/
+      - path: /integration/mocha/
   - path: /reporting/
     section:
       - path: /reporting/jenkins/
