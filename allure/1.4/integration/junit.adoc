@@ -1,24 +1,29 @@
----
-title: jUnit
-layout: docs
-product: allure
-version: 1.4
----
+= jUnit
+:icons: font
+:page-layout: docs
+:page-version: 1.4
+:page-product: allure
+:source-highlighter: coderay
 
-An Allure report can be generated for any [JUnit](http://junit.org/) 4 test.
-**Warning: Allure only supports JUnit 4 or higher. You will get nothing with JUnit 3.**
+WARNING: Allure only supports JUnit 4 or higher. You will get nothing with JUnit 3.
+
+An Allure report can be generated for any http://junit.org[JUnit 4] test.
+
 In order to get test results, you need to:
 
 * Add AllureRunListener to JUnit.
 * Add AspectJ Weaver and respective properties.
 * Run tests.
 
-## Maven
+== Maven
 
 See the example project: https://github.com/allure-framework/allure-junit-example
 
 You need to add the following to your **pom.xml**:
-```xml
+[source, xml]
+.pom.xml
+----
+...
 <properties>
     <aspectj.version>1.7.4</aspectj.version>
     <allure.version>{latest-allure-version}</allure.version>
@@ -60,13 +65,20 @@ You need to add the following to your **pom.xml**:
         </plugin>
     </plugins>
 </build>
-```
+...
+----
+
 Then run the build as usual:
-```bash
+
+[source, bash]
+----
 $ mvn clean test
-```
+----
+
 Depending on the project layout, you can consider adding Allure dependency to the test scope only.
 
-## Ant
+== Ant
 
-Right now using Allure with [Ant](http://ant.apache.org/) is not possible, because the [RunListener](http://junit.sourceforge.net/javadoc/org/junit/runner/notification/RunListener.html) that we provide is only supported in JUnit 4, whereas even the latest version of Ant requires the implementation of JUnit 3 specific interfaces.
+Right now using Allure with http://ant.apache.org[Ant] is not possible,
+because the http://junit.sourceforge.net/javadoc/org/junit/runner/notification/RunListener.html[RunListener] that we
+provide is only supported in JUnit 4, whereas even the latest version of Ant requires the implementation of JUnit 3 specific interfaces.

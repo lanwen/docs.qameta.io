@@ -1,4 +1,8 @@
-:page-title: Integration
+= Integration
+:icons: font
 :page-layout: docs
 :page-version: 1.4
 :page-product: allure
+:source-highlighter: coderay
+
+WARNING: This page under development...

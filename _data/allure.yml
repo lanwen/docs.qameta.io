@@ -12,11 +12,10 @@ toc:
       - path: /integration/testng/
   - path: /reporting/
     section:
-      - path: /reporting/command_line/
-      - path: /reporting/maven_plugin/
       - path: /reporting/jenkins_plugin/
       - path: /reporting/teamcity_plugin/
       - path: /reporting/bamboo_plugin/
+      - path: /reporting/maven_plugin/
   - path: /features/
     section:
       - path: /features/steps/

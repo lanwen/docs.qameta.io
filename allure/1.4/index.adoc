@@ -1,7 +1,10 @@
-:page-title: Introduction
+= Overview
+:icons: font
 :page-layout: docs
 :page-version: 1.4
 :page-product: allure
+
+WARNING: This page under development...
 
 Allure Framework is a flexible lightweight multi-language test report tool with the possibility to add screenshots,
 logs and so on. It provides modular architecture and neat web reports with the ability to store attachments, steps,

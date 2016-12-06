@@ -1,5 +1,5 @@
 ---
-title: Allure Maven Plugin
+title: Maven Plugin
 layout: docs
 product: allure
 version: 1.4
