@@ -1,15 +1,13 @@
 = Pytest
 :icons: font
+:imagesdir: /allure/1.4/img/
 :page-layout: docs
 :page-version: 1.4
 :page-product: allure
 :source-highlighter: coderay
 
-Allure Pytest Adaptor
-=====================
 
-This repository contains a plugin for `py.test` which automatically prepares input data used to generate `Allure Report`.
-**Note:** this plugin currently supports only Allure 1.4.x series.
+WARNING: This plugin currently supports only Allure 1.4.x series.
 
 == Installation and Usage
 
@@ -28,23 +26,15 @@ Connecting to IDE:
 pytest_plugins = 'allure.pytest_plugin',\
 ----
 
-== Allure Features
+== Features
 
+=== Title
+IMPORTANT: Not implemented now
 
-=== Attachments
-
-To attach some content to test report:
-
-[source, python]
-----
-import allure
-
-def test_foo():
-    allure.attach('my attach', 'Hello, World')
-----
+=== Description
+IMPORTANT: Not implemented now
 
 === Steps
-
 To divide a test into steps:
 
 [source, python]
@@ -111,8 +101,82 @@ Arguments are passed to `format` method in the same way they are passed to the d
 
 Steps support is limited when used with fixtures.
 
-=== Severity
+=== Attachments
+To attach some content to test report:
 
+[source, python]
+----
+import allure
+
+def test_foo():
+    allure.attach('my attach', 'Hello, World')
+----
+
+
+=== Issues Tracker
+Issues can be set for test.
+
+[source, python]
+----
+import pytest
+
+@pytest.allure.issue('http://jira.lan/browse/ISSUE-1')
+def test_foo():
+    assert False
+----
+
+[source, python]
+----
+import allure
+
+@allure.issue('http://jira.lan/browse/ISSUE-2')
+class TestBar:
+
+    # test will have ISSUE-2, ISSUE-3 and ISSUE-4 label
+    @allure.issue('http://jira.lan/browse/ISSUE-3')
+    def test_bar1(self):
+        # You can use this feature like a function inside the test
+        allure.dynamic_issue('http://jira.lan/browse/ISSUE-4')
+        pass
+
+    # test will have only ISSUE-2 label
+    def test_bar2(self):
+        pass
+----
+
+=== Test Management System
+Test cases links can be set for test also.
+
+[source, python]
+----
+import pytest
+
+@pytest.allure.testcase('http://my.tms.org/TESTCASE-1')
+def test_foo():
+    assert False
+----
+
+[source, python]
+----
+import allure
+
+@allure.testcase('http://my.tms.org/browse/TESTCASE-2')
+class TestBar:
+
+    # test will have TESTCASE-2 and TESTCASE-3 label
+    @allure.testcase('TESTCASE-3')
+    def test_bar1(self):
+        pass
+
+    # test will have only TESTCASE-2 label
+    def test_bar2(self):
+        pass
+----
+
+=== Parameters
+IMPORTANT: Not implemented now
+
+=== Severity
 Any test, class or module can be marked with different severity:
 
 [source, python]
@@ -144,70 +208,7 @@ To run tests with concrete priority:
 py.test my_tests/ --allure_severities=critical,blocker
 ----
 
-=== Issues
-
-Issues can be set for test.
-
-[source, python]
-----
-import pytest
-
-@pytest.allure.issue('http://jira.lan/browse/ISSUE-1')
-def test_foo():
-    assert False
-----
-
-[source, python]
-----
-import allure
-
-@allure.issue('http://jira.lan/browse/ISSUE-2')
-class TestBar:
-
-    # test will have ISSUE-2, ISSUE-3 and ISSUE-4 label
-    @allure.issue('http://jira.lan/browse/ISSUE-3')
-    def test_bar1(self):
-        # You can use this feature like a function inside the test
-        allure.dynamic_issue('http://jira.lan/browse/ISSUE-4')
-        pass
-
-    # test will have only ISSUE-2 label
-    def test_bar2(self):
-        pass
-----
-
-=== Test cases
-
-Test cases links can be set for test also.
-
-[source, python]
-----
-import pytest
-
-@pytest.allure.testcase('http://my.tms.org/TESTCASE-1')
-def test_foo():
-    assert False
-----
-
-[source, python]
-----
-import allure
-
-@allure.testcase('http://my.tms.org/browse/TESTCASE-2')
-class TestBar:
-
-    # test will have TESTCASE-2 and TESTCASE-3 label
-    @allure.testcase('TESTCASE-3')
-    def test_bar1(self):
-        pass
-
-    # test will have only TESTCASE-2 label
-    def test_bar2(self):
-        pass
-----
-
-=== Features & Stories
-
+=== Behaviours Mapping
 Feature and Story can be set for test.
 
 [source, python]
