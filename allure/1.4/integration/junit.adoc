@@ -1,25 +1,18 @@
 = jUnit
 :icons: font
+:imagesdir: /allure/1.4/img/
 :page-layout: docs
 :page-version: 1.4
 :page-product: allure
 :source-highlighter: coderay
 
-WARNING: Allure only supports JUnit 4 or higher. You will get nothing with JUnit 3.
+WARNING: Allure only supports JUnit 4. You will get nothing with JUnit 3.
 
-An Allure report can be generated for any http://junit.org[JUnit 4] test.
+== Installation
 
-In order to get test results, you need to:
+=== Maven
 
-* Add AllureRunListener to JUnit.
-* Add AspectJ Weaver and respective properties.
-* Run tests.
-
-== Maven
-
-See the example project: https://github.com/allure-framework/allure-junit-example
-
-You need to add the following to your **pom.xml**:
+You need to add the following to your *pom.xml*:
 [source, xml]
 .pom.xml
 ----
@@ -74,6 +67,80 @@ Then run the build as usual:
 ----
 $ mvn clean test
 ----
+
+== Features
+
+This adapter comes with a set of Java annotations and traits allowing to use main Allure features.
+
+=== Title
+In order to add such title to any test class or https://github.com/allure-framework/allure-core/wiki/Glossary#test-case[test case]
+method you need to annotate it with *@Title* annotation:
+
+[source, java]
+----
+package my.company.tests;
+
+import org.junit.Test;
+import ru.yandex.qatools.allure.annotations.Title;
+
+@Title("Human-readable test suite title")
+public class SearchTest {
+
+    @Test
+    @Title("Human-readable test case title")
+    public void searchTest() throws Exception {
+        ...
+    }
+
+}
+----
+
+=== Description
+Similarly you can add detailed description for each test class and
+https://github.com/allure-framework/allure-core/wiki/Glossary#test-case[test method].
+
+To add such description simply use *@Description* annotation:
+
+[source, java]
+----
+@Description(value = "Detailed description for this <b>test suite</b>.", type = DescriptionType.HTML)
+public class SearchTest {
+
+    @Test
+    @Description(value = "Detailed description for this *test case*.", type = DescriptionType.MARKDOWN)
+    public void searchTest() throws Exception {
+
+    }
+
+}
+----
+
+Description can be added in plain text, HTML or Markdown format - simply assign different **type** value.
+
+
+=== Steps
+
+Steps are any actions that constitute a testing scenario. Steps can be used in different testing scenarios.
+They can: be parametrized, make checks, have nested steps, and create attachments. Each step has a name.
+
+In order to define steps in Java code, you need to annotate the respective methods with **@Step** annotation.
+When not specified, the step name is equal to the annotated method name converted to human-readable format.
+To define an explicit step name:
+
+[source, java]
+----
+@Step("Open {0} page.")
+public void openPageByAddress(String pageAddress) {
+     ...
+}
+----
+
+Step names support the following placeholders:
+
+* *{N}* where N is a zero-based positive integer that will be replaced by the Nth method argument value (0 corresponds
+  to the first argument, 1 to the second, etc.). See example above.
+* *{method}* will be replaced by the annotated method name e.g. *openPageByAddress*
+
 
 Depending on the project layout, you can consider adding Allure dependency to the test scope only.
 
