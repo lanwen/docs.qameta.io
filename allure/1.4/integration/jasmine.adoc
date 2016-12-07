@@ -7,7 +7,9 @@
 
 A plugin for Allure report generation from Jasmine tests.
 
-== Using Allure Reporter in Jasmine2
+== Installation:
+
+=== From Jasmine2
 
 Add the lib into `package.json` and then configure the plugin:
 
@@ -20,7 +22,7 @@ jasmine.getEnv().addReporter(new AllureReporter({
 }));
 ----
 
-== Using Allure Reporter in Protractor
+=== From Protractor
 
 Put the above code into the `onPrepare` inside of your `conf.js`:
 
@@ -51,25 +53,6 @@ It will put HTMLs into `target/site/allure-maven-plugin` folder. To serve them v
 
 Otherwise choose one of the
 https://github.com/allure-framework/allure-core/wiki#generating-a-report[other ways to generate HTML].
-
-== Adding Screenshot in the end of each test
-
-[source, javascript]
-----
-  onPrepare: function () {
-    var AllureReporter = require('jasmine-allure-reporter');
-    jasmine.getEnv().addReporter(new AllureReporter());
-    jasmine.getEnv().afterEach(function(done){
-      browser.takeScreenshot().then(function (png) {
-        allure.createAttachment('Screenshot', function () {
-          return new Buffer(png, 'base64')
-        }, 'image/png')();
-        done();
-      })
-    });
-  }
-----
-Note `done` callback!
 
 == Features
 
@@ -133,6 +116,41 @@ here
 specify attachment explicitly type for all attached files as Allure by default analyses attachment contents and
 can determine attachment type automatically. You usually need to specify attachment type when working with plain
 text files.
+
+Example: adding a screenshot in the end of each test
+
+[source, javascript]
+----
+  onPrepare: function () {
+    var AllureReporter = require('jasmine-allure-reporter');
+    jasmine.getEnv().addReporter(new AllureReporter());
+    jasmine.getEnv().afterEach(function(done){
+      browser.takeScreenshot().then(function (png) {
+        allure.createAttachment('Screenshot', function () {
+          return new Buffer(png, 'base64')
+        }, 'image/png')();
+        done();
+      })
+    });
+  }
+----
+Note `done` callback!
+
+=== Issues Tracker
+
+WARNING: Integration with bug tracker system is not currently implemented
+
+=== Test Management System
+
+WARNING: Integration with test management system is not currently implemented
+
+=== Parameters
+
+In order to add information about test method
+https://github.com/allure-framework/allure-core/wiki/Glossary#parameter[parameters] you should use one of the methods:
+
+. `addArgument(name, value)` - to specify more information on one of the test arguments
+. `addEnvironment(name, value)` - to specify more information on some of the environment variables
 
 WARNING: code snippet TBD
 
