@@ -8,7 +8,7 @@ toc:
       - path: /quickstart/generate-report/
   - path: /integration/
     section:
-      - path: /integration/junit/
+      - path: /integration/junit4/
       - path: /integration/testng/
       - path: /integration/mstest/
       - path: /integration/nose/
