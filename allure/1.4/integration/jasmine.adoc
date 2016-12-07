@@ -71,6 +71,71 @@ https://github.com/allure-framework/allure-core/wiki#generating-a-report[other w
 ----
 Note `done` callback!
 
+== Features
+
+This adapter provides a set of methods that can be called from the global `Jasmine2AllureReporter` object.
+It wraps https://github.com/allure-framework/allure-js-commons[common allure JS adapter] and provides access
+to basic Allure features implemented there.
+
+=== Title
+
+WARNING: TBD it is not implemented currently
+
+=== Description
+
+In order to add a detailed description for a test you should call a `setDescription(description)` method
+where *description* is your string argument.
+
+WARNING: code snippet TBD
+
+=== Severity
+
+You can specify a severity attribute for a test via `severity(severity)` method where
+*severity* argument can hold one of the following pre-defined values:
+
+* BLOCKER
+* CRITICAL
+* NORMAL
+* MINOR
+* TRIVIAL
+
+WARNING: code snippet TBD
+
+=== Behaviours
+
+In some development approaches tests are classified by
+https://github.com/allure-framework/allure-core/wiki/Glossary#user-story[stories] and
+https://github.com/allure-framework/allure-core/wiki/Glossary#feature[features].
+If you’re using this, then for each test you can set story and feature attributes via `story(story)` and
+`feature(feature)` methods respectively, accepting *story* or *feature* as a string argument.
+
+WARNING: code snippet TBD
+
+=== Steps
+
+Steps are needed to specify actions that constitute a testing scenario.
+Steps are named, they can create attachments and can be used in different testing scenarios.
+You can add a step via `createStep(name, stepFunc)` method, where
+
+* *name* is a string arg bearing step name
+* *stepFunc* is a wrapped function whose logic this step represents in the report.
+
+WARNING: code snippet TBD
+
+=== Attachments
+
+You can add an attachment for one of the steps via `createAttachment(name, content, type)` method
+here
+
+* *name* is a string bearing attachment's description
+* *content* is either a function, returning attachment object or the attachment object itself.
+* *type* is a string parameter to specify exact MIME type for each attached file. However there’s no need to
+specify attachment explicitly type for all attached files as Allure by default analyses attachment contents and
+can determine attachment type automatically. You usually need to specify attachment type when working with plain
+text files.
+
+WARNING: code snippet TBD
+
 == TBD
 
 * Currently attachments are added to the test case instead of the current step. This needs to be fixed in allure-js-commons.
