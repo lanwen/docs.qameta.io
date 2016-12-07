@@ -1,4 +1,4 @@
-= Steps
+= Issue
 :icons: font
 :imagesdir: /allure/1.4/img/
 :page-layout: docs

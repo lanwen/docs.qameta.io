@@ -106,6 +106,11 @@ To add such description simply use *@Description* annotation:
 
 [source, java]
 ----
+package my.company.tests;
+
+import org.junit.Test;
+import ru.yandex.qatools.allure.annotations.Description;
+
 @Test
 @Description(
         value = "Detailed description for this <a href="...">test suite</a>.",
@@ -127,9 +132,7 @@ public class SearchTest {
 
 Description can be added in plain *text*, *HTML* or *Markdown* format - simply assign different **type** value.
 
-
 === Steps
-
 Steps are any actions that constitute a testing scenario. Steps can be used in different testing scenarios.
 They can: be parametrized, make checks, have nested steps, and create attachments. Each step has a name.
 
@@ -154,7 +157,6 @@ Step names support the following placeholders:
 Depending on the project layout, you can consider adding Allure dependency to the test scope only.
 
 === Attachments
-
 An attachment in Java code is simply a method annotated with *@Attachment* that returns either
 a **String** or **byte[]**, which should be added to the report:
 
@@ -179,8 +181,99 @@ like shown above. However there's no need to explicitly specify attachment type 
 by default analyses attachment contents and can determine attachment type automatically. You usually need to
 specify attachment type when working with plain text files.
 
-=== Behaviours Mapping
+=== Issues Tracker
+To link a https://github.com/allure-framework/allure-core/wiki/Glossary#test-case[test case] or a
+https://github.com/allure-framework/allure-core/wiki/Glossary#test-suite[test suite] to such issues,
+you can use *@Issue* annotation. Simply specify the issue key as shown below:
 
+[source, java]
+----
+@Issue("MYISSUE-1")
+public void testSomething() {
+     ...
+}
+----
+
+To add multiple issues, use *@Issues* annotation:
+
+[source, java]
+----
+@Issues({
+    @Issue("MYISSUE-1"),
+    @Issue("MYISSUE-2")
+})
+public void testSomething() {
+     ...
+}
+----
+
+To specify the issue tracker URL, use the **allure.issues.tracker.pattern** property during report generation
+(either in the *allure.properties* file or as your build tool property):
+
+[source]
+----
+allure.issues.tracker.pattern=http://github.com/allure-framework/allure-core/issues/%s
+----
+
+=== Test Management System
+To link a https://github.com/allure-framework/allure-core/wiki/Glossary#test-case[test case] to Test Management System,
+you can use *@TestCaseId* annotation. Simply specify the test case ID as shown below:
+
+[source, java]
+----
+@TestCaseId("TMS-1")
+public void testSomething() {
+     ...
+}
+----
+
+=== Parameters
+In order to add information about test method
+https://github.com/allure-framework/allure-core/wiki/Glossary#parameter[parameters]
+you should use *@Parameter* annotation:
+
+[source, java]
+----
+package my.company.tests;
+
+import org.junit.Test;
+import ru.yandex.qatools.allure.annotations.Parameter;
+
+public class SearchTest {
+
+    @Parameter("Base web driver url")
+    private final String baseUrl = "http://...";
+
+    @Test
+    public void searchTest() throws Exception {
+
+    }
+
+}
+----
+
+=== Severity
+*@Severity* annotation is used in order to prioritize test methods by severity:
+[source, php]
+----
+package my.company.tests;
+
+import org.junit.Test;
+import ru.yandex.qatools.allure.annotations.Severity;
+import ru.yandex.qatools.allure.model.SeverityLevel;
+
+public class SearchTest {
+
+    @Test
+    @Severity(SeverityLevel.CRITICAL)
+    public void searchTest() throws Exception {
+
+    }
+
+}
+----
+
+=== Behaviours Mapping
 In some development approaches tests are classified by
 https://github.com/allure-framework/allure-core/wiki/Glossary#user-story[stories]
 and https://github.com/allure-framework/allure-core/wiki/Glossary#feature[features].
@@ -209,7 +302,3 @@ public class SearchTest {
 ----
 
 You will then be able to filter tests by specified features and stories in generated Allure report.
-
-
-
-
