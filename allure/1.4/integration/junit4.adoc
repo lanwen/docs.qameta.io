@@ -173,7 +173,7 @@ public byte[] saveScreenshot(byte[] screenShot) {
 }
 ----
 
-If a method annotated with *@Attachment* return type differs from *String* or *byte[]* we call *toString()*
+If return type in a method annotated with *@Attachment* differs from *String* or *byte[]* we call *toString()*
 on return value to get attachment contents.
 
 You can specify exact MIME type for each attached file using *type* parameter of *@Attachment* annotation
@@ -254,7 +254,7 @@ public class SearchTest {
 
 === Severity
 *@Severity* annotation is used in order to prioritize test methods by severity:
-[source, php]
+[source, java]
 ----
 package my.company.tests;
 
