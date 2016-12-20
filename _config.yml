@@ -24,7 +24,8 @@ exclude:
   - docker-compose.yml
   - Gemfile.lock
   - Gemfile
-  - README.md
+  - Jenkinsfile
+  - README
 
 metrcs:
   yandex: "38078235"
