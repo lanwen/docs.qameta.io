@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RSpec</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"
+          rel="stylesheet">
+
+    <link href="/css/styles.css" rel="stylesheet">
+
+    <!--<link href="/assets/style.css" rel="stylesheet">-->
+    <!--<link href="/assets/markdown.css" rel="stylesheet">-->
+
+</head>
+
+<body>
+
+
+<div class="docs-sidebar">
+    <div class="sidebar">
+    <ul class="list">
+        <li class="list__item">
+            <h3>Allure Framework</h3>
+        </li>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/" class="">
+            Overview
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/">
+            Quick Start
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/installation/" class="">
+            Installation
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/run-your-tests/" class="">
+            Run Your Tests
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/generate-report/" class="">
+            Generate Report
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/">
+            Integration
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/junit4/" class="">
+            jUnit 4
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/testng/" class="">
+            TestNG
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/mstest/" class="">
+            MSTest
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/nose/" class="">
+            Nose
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/nunit/" class="">
+            NUnit
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/phpunit/" class="">
+            PHPUnit
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/pytest/" class="">
+            Pytest
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item active">
+        
+        <a href="/allure/1.4/integration/rspec/" class="">
+            RSpec
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/scalatest/" class="">
+            Scaltest
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/specs/" class="">
+            Specs
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/spock/" class="">
+            Spock
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/codeception/" class="">
+            Codeception
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/cucumber/" class="">
+            Cucumber
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/cucumberjs/" class="">
+            Cucumber JS
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/cucumberjvm/" class="">
+            Cucumber JVM
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/jasmine/" class="">
+            Jasmine
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/karma/" class="">
+            Karma
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/mocha/" class="">
+            Mocha
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/">
+            Reporting
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/commandline/" class="">
+            Commandline
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/teamcity/" class="">
+            TeamCity
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/jenkins/" class="">
+            Jenkins
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/bamboo/" class="">
+            Bamboo
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/maven/" class="">
+            Maven
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/gradle/" class="">
+            Gradle
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/">
+            Main features
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/steps/" class="">
+            Steps
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/attachments/" class="">
+            Attachments
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/features_and_stories/" class="">
+            Features and Stories
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/parameters/" class="">
+            Parameters
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/environment/" class="">
+            Environment
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/issues/" class="">
+            Issue
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/testcase_id/" class="">
+            Test Case ID
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="">
+            
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="" class="">
+            
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="" class="">
+            
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="" class="">
+            
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+</ul>
+    </ul>
+</div>
+
+</div>
+<div class="docs-body">
+    <h1>RSpec</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Adaptor to use the Allure framework along with the RSpec. See <a href="https://github.com/allure-examples/allure-rspec-example">an
+example</a> project to take a quick tour.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="what-s-new">What&#8217;s new</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See the <a href="https://github.com/allure-framework/allure-rspec/releases">releases</a> tab.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setup">Setup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Add the dependency to your Gemfile. Choose the version carefully:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>0.5.x - for RSpec2.</p>
+</li>
+<li>
+<p>&#8656; 0.6.7 - for RSpec &lt; 3.2.</p>
+</li>
+<li>
+<p>&gt;= 0.6.9 - for RSpec &gt;= 3.2.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="ruby"> gem <span class="string"><span class="delimiter">'</span><span class="content">allure-rspec</span><span class="delimiter">'</span></span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And then include it in your spec_helper.rb:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="ruby">    <span class="constant">RSpec</span>.configure <span class="keyword">do</span> |c|
+      c.include <span class="constant">AllureRSpec</span>::<span class="constant">Adaptor</span>
+    <span class="keyword">end</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="advanced-options">Advanced options</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can specify the directory where the Allure test results will appear. By default it would be 'gen/allure-results'
+within your current directory.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="ruby">    <span class="constant">AllureRSpec</span>.configure <span class="keyword">do</span> |c|
+      c.output_dir = <span class="string"><span class="delimiter">&quot;</span><span class="content">/whatever/you/like</span><span class="delimiter">&quot;</span></span> <span class="comment"># default: gen/allure-results</span>
+      c.clean_dir = <span class="predefined-constant">false</span> <span class="comment"># clean the output directory first? (default: true)</span>
+      c.logging_level = <span class="constant">Logger</span>::<span class="constant">DEBUG</span> <span class="comment"># logging level (default: DEBUG)</span>
+    <span class="keyword">end</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="usage-examples">Usage examples</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="ruby">describe <span class="constant">MySpec</span>, <span class="symbol">:feature</span> =&gt; <span class="string"><span class="delimiter">&quot;</span><span class="content">Some feature</span><span class="delimiter">&quot;</span></span>, <span class="symbol">:severity</span> =&gt; <span class="symbol">:normal</span> <span class="keyword">do</span>
+
+  before(<span class="symbol">:step</span>) <span class="keyword">do</span> |s|
+    puts <span class="string"><span class="delimiter">&quot;</span><span class="content">Before step </span><span class="inline"><span class="inline-delimiter">#{</span>s.current_step<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+  <span class="keyword">end</span>
+
+  it <span class="string"><span class="delimiter">&quot;</span><span class="content">should be critical</span><span class="delimiter">&quot;</span></span>, <span class="symbol">:story</span> =&gt; <span class="string"><span class="delimiter">&quot;</span><span class="content">First story</span><span class="delimiter">&quot;</span></span>, <span class="symbol">:severity</span> =&gt; <span class="symbol">:critical</span>, <span class="symbol">:testId</span> =&gt; <span class="integer">99</span> <span class="keyword">do</span>
+    <span class="string"><span class="delimiter">&quot;</span><span class="content">string</span><span class="delimiter">&quot;</span></span>.should == <span class="string"><span class="delimiter">&quot;</span><span class="content">string</span><span class="delimiter">&quot;</span></span>
+  <span class="keyword">end</span>
+
+  it <span class="string"><span class="delimiter">&quot;</span><span class="content">should be steps enabled</span><span class="delimiter">&quot;</span></span>, <span class="symbol">:story</span> =&gt; [<span class="string"><span class="delimiter">&quot;</span><span class="content">First story</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">Second story</span><span class="delimiter">&quot;</span></span>], <span class="symbol">:testId</span> =&gt; <span class="integer">31</span> <span class="keyword">do</span> |e|
+
+    e.step <span class="string"><span class="delimiter">&quot;</span><span class="content">step1</span><span class="delimiter">&quot;</span></span> <span class="keyword">do</span> |s|
+      s.attach_file <span class="string"><span class="delimiter">&quot;</span><span class="content">screenshot1</span><span class="delimiter">&quot;</span></span>, take_screenshot_as_file
+    <span class="keyword">end</span>
+
+    e.step <span class="string"><span class="delimiter">&quot;</span><span class="content">step2</span><span class="delimiter">&quot;</span></span> <span class="keyword">do</span>
+      <span class="integer">5</span>.should be &gt; <span class="integer">0</span>
+    <span class="keyword">end</span>
+
+    e.step <span class="string"><span class="delimiter">&quot;</span><span class="content">step3</span><span class="delimiter">&quot;</span></span> <span class="keyword">do</span>
+      <span class="integer">0</span>.should == <span class="integer">0</span>
+    <span class="keyword">end</span>
+
+    e.attach_file <span class="string"><span class="delimiter">&quot;</span><span class="content">screenshot2</span><span class="delimiter">&quot;</span></span>, take_screenshot_as_file
+  <span class="keyword">end</span>
+<span class="keyword">end</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+</footer>
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40262569 = new Ya.Metrika({ id:40262569, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40262569" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</body>
+
+</html>

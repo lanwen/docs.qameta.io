@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jasmine</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"
+          rel="stylesheet">
+
+    <link href="/css/styles.css" rel="stylesheet">
+
+    <!--<link href="/assets/style.css" rel="stylesheet">-->
+    <!--<link href="/assets/markdown.css" rel="stylesheet">-->
+
+</head>
+
+<body>
+
+
+<div class="docs-sidebar">
+    <div class="sidebar">
+    <ul class="list">
+        <li class="list__item">
+            <h3>Allure Framework</h3>
+        </li>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/" class="">
+            Overview
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/">
+            Quick Start
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/installation/" class="">
+            Installation
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/run-your-tests/" class="">
+            Run Your Tests
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/generate-report/" class="">
+            Generate Report
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/">
+            Integration
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/junit4/" class="">
+            jUnit 4
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/testng/" class="">
+            TestNG
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/mstest/" class="">
+            MSTest
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/nose/" class="">
+            Nose
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/nunit/" class="">
+            NUnit
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/phpunit/" class="">
+            PHPUnit
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/pytest/" class="">
+            Pytest
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/rspec/" class="">
+            RSpec
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/scalatest/" class="">
+            Scaltest
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/specs/" class="">
+            Specs
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/spock/" class="">
+            Spock
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/codeception/" class="">
+            Codeception
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/cucumber/" class="">
+            Cucumber
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/cucumberjs/" class="">
+            Cucumber JS
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/cucumberjvm/" class="">
+            Cucumber JVM
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item active">
+        
+        <a href="/allure/1.4/integration/jasmine/" class="">
+            Jasmine
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/karma/" class="">
+            Karma
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/mocha/" class="">
+            Mocha
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/">
+            Reporting
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/commandline/" class="">
+            Commandline
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/teamcity/" class="">
+            TeamCity
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/jenkins/" class="">
+            Jenkins
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/bamboo/" class="">
+            Bamboo
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/maven/" class="">
+            Maven
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/gradle/" class="">
+            Gradle
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/">
+            Main features
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/steps/" class="">
+            Steps
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/attachments/" class="">
+            Attachments
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/features_and_stories/" class="">
+            Features and Stories
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/parameters/" class="">
+            Parameters
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/environment/" class="">
+            Environment
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/issues/" class="">
+            Issue
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/testcase_id/" class="">
+            Test Case ID
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="">
+            
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="" class="">
+            
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="" class="">
+            
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="" class="">
+            
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+</ul>
+    </ul>
+</div>
+
+</div>
+<div class="docs-body">
+    <h1>Jasmine</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A plugin for Allure report generation from Jasmine tests.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installation">Installation:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="from-jasmine2">From Jasmine2</h3>
+<div class="paragraph">
+<p>Add the lib into <code>package.json</code> and then configure the plugin:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="javascript"><span class="comment">// conf.js</span>
+<span class="keyword">var</span> AllureReporter = require(<span class="string"><span class="delimiter">'</span><span class="content">jasmine-allure-reporter</span><span class="delimiter">'</span></span>);
+jasmine.getEnv().addReporter(<span class="keyword">new</span> AllureReporter({
+  <span class="key">resultsDir</span>: <span class="string"><span class="delimiter">'</span><span class="content">allure-results</span><span class="delimiter">'</span></span>
+}));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="from-protractor">From Protractor</h3>
+<div class="paragraph">
+<p>Put the above code into the <code>onPrepare</code> inside of your <code>conf.js</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="javascript"><span class="comment">// conf.js</span>
+exports.config = {
+  <span class="key">framework</span>: <span class="string"><span class="delimiter">'</span><span class="content">jasmine2</span><span class="delimiter">'</span></span>,
+  <span class="function">onPrepare</span>: <span class="keyword">function</span>() {
+    <span class="keyword">var</span> AllureReporter = require(<span class="string"><span class="delimiter">'</span><span class="content">jasmine-allure-reporter</span><span class="delimiter">'</span></span>);
+    jasmine.getEnv().addReporter(<span class="keyword">new</span> AllureReporter({
+      <span class="key">resultsDir</span>: <span class="string"><span class="delimiter">'</span><span class="content">allure-results</span><span class="delimiter">'</span></span>
+    }));
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="generate-html-report-from-allure-results">Generate HTML report from Allure results</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Reporter will generate xml files inside of a <code>resultsDir</code>, then we need to generate HTML out of them.
+You can use Maven for that. Copy ready-to-use <code>pom.xml</code> from <code>node_modules/jasmine-allure-reporter</code> and run:</p>
+</div>
+<div class="paragraph">
+<p><code>mvn site -Dallure.results_pattern=allure-results</code></p>
+</div>
+<div class="paragraph">
+<p>It will put HTMLs into <code>target/site/allure-maven-plugin</code> folder. To serve them via <code>localhost:1324</code> use:</p>
+</div>
+<div class="paragraph">
+<p><code>mvn jetty:run -Djetty.port=1234</code></p>
+</div>
+<div class="paragraph">
+<p>Otherwise choose one of the
+<a href="https://github.com/allure-framework/allure-core/wiki#generating-a-report">other ways to generate HTML</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="features">Features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This adapter provides a set of methods that can be called from the global <code>Jasmine2AllureReporter</code> object.
+It wraps <a href="https://github.com/allure-framework/allure-js-commons">common allure JS adapter</a> and provides access
+to basic Allure features implemented there.</p>
+</div>
+<div class="sect2">
+<h3 id="title">Title</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+TBD it is not implemented currently
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="description">Description</h3>
+<div class="paragraph">
+<p>In order to add a detailed description for a test you should call a <code>setDescription(description)</code> method
+where <strong>description</strong> is your string argument.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+code snippet TBD
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="severity">Severity</h3>
+<div class="paragraph">
+<p>You can specify a severity attribute for a test via <code>severity(severity)</code> method where
+<strong>severity</strong> argument can hold one of the following pre-defined values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>BLOCKER</p>
+</li>
+<li>
+<p>CRITICAL</p>
+</li>
+<li>
+<p>NORMAL</p>
+</li>
+<li>
+<p>MINOR</p>
+</li>
+<li>
+<p>TRIVIAL</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+code snippet TBD
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="behaviours">Behaviours</h3>
+<div class="paragraph">
+<p>In some development approaches tests are classified by
+<a href="https://github.com/allure-framework/allure-core/wiki/Glossary#user-story">stories</a> and
+<a href="https://github.com/allure-framework/allure-core/wiki/Glossary#feature">features</a>.
+If you’re using this, then for each test you can set story and feature attributes via <code>story(story)</code> and
+<code>feature(feature)</code> methods respectively, accepting <strong>story</strong> or <strong>feature</strong> as a string argument.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+code snippet TBD
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="steps">Steps</h3>
+<div class="paragraph">
+<p>Steps are needed to specify actions that constitute a testing scenario.
+Steps are named, they can create attachments and can be used in different testing scenarios.
+You can add a step via <code>createStep(name, stepFunc)</code> method, where</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>name</strong> is a string arg bearing step name</p>
+</li>
+<li>
+<p><strong>stepFunc</strong> is a wrapped function whose logic this step represents in the report.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+code snippet TBD
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="attachments">Attachments</h3>
+<div class="paragraph">
+<p>You can add an attachment for one of the steps via <code>createAttachment(name, content, type)</code> method
+here</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>name</strong> is a string bearing attachment&#8217;s description</p>
+</li>
+<li>
+<p><strong>content</strong> is either a function, returning attachment object or the attachment object itself.</p>
+</li>
+<li>
+<p><strong>type</strong> is a string parameter to specify exact MIME type for each attached file. However there’s no need to
+specify attachment explicitly type for all attached files as Allure by default analyses attachment contents and
+can determine attachment type automatically. You usually need to specify attachment type when working with plain
+text files.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example: adding a screenshot in the end of each test</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="javascript">  <span class="function">onPrepare</span>: <span class="keyword">function</span> () {
+    <span class="keyword">var</span> AllureReporter = require(<span class="string"><span class="delimiter">'</span><span class="content">jasmine-allure-reporter</span><span class="delimiter">'</span></span>);
+    jasmine.getEnv().addReporter(<span class="keyword">new</span> AllureReporter());
+    jasmine.getEnv().afterEach(<span class="keyword">function</span>(done){
+      browser.takeScreenshot().then(<span class="keyword">function</span> (png) {
+        allure.createAttachment(<span class="string"><span class="delimiter">'</span><span class="content">Screenshot</span><span class="delimiter">'</span></span>, <span class="keyword">function</span> () {
+          <span class="keyword">return</span> <span class="keyword">new</span> Buffer(png, <span class="string"><span class="delimiter">'</span><span class="content">base64</span><span class="delimiter">'</span></span>)
+        }, <span class="string"><span class="delimiter">'</span><span class="content">image/png</span><span class="delimiter">'</span></span>)();
+        done();
+      })
+    });
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note <code>done</code> callback!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="issues-tracker">Issues Tracker</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Integration with bug tracker system is not currently implemented
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="test-management-system">Test Management System</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Integration with test management system is not currently implemented
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="parameters">Parameters</h3>
+<div class="paragraph">
+<p>In order to add information about test method
+<a href="https://github.com/allure-framework/allure-core/wiki/Glossary#parameter">parameters</a> you should use one of the methods:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>addArgument(name, value)</code> - to specify more information on one of the test arguments</p>
+</li>
+<li>
+<p><code>addEnvironment(name, value)</code> - to specify more information on some of the environment variables</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+code snippet TBD
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tbd">TBD</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Currently attachments are added to the test case instead of the current step. This needs to be fixed in allure-js-commons.</p>
+</li>
+<li>
+<p>Add support for Features.</p>
+</li>
+<li>
+<p>Add support to Jasmine1. Right now only Jasmine2 is available (do we really need this?).</p>
+</li>
+<li>
+<p>Add ability to use reflection for decoration method of page objects so that we don&#8217;t need to write
+Allure-related boilerplate tying ourselves to one specific reporter.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h1 id="for-developers" class="sect0">For Developers</h1>
+<div class="paragraph">
+<p>See the <a href="https://github.com/allure-framework/allure-jasmine-plugin/blob/master/test/system">system tests</a>
+ to quickly check how the reporter works in real life:</p>
+</div>
+<div class="paragraph">
+<p><code>node_modules/protractor/bin/protractor ./test/system/conf.js</code></p>
+</div>
+</div>
+
+<footer>
+</footer>
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40262569 = new Ya.Metrika({ id:40262569, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40262569" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</body>
+
+</html>

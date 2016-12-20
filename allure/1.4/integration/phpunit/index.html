@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PHPUnit</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"
+          rel="stylesheet">
+
+    <link href="/css/styles.css" rel="stylesheet">
+
+    <!--<link href="/assets/style.css" rel="stylesheet">-->
+    <!--<link href="/assets/markdown.css" rel="stylesheet">-->
+
+</head>
+
+<body>
+
+
+<div class="docs-sidebar">
+    <div class="sidebar">
+    <ul class="list">
+        <li class="list__item">
+            <h3>Allure Framework</h3>
+        </li>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/" class="">
+            Overview
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/">
+            Quick Start
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/installation/" class="">
+            Installation
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/run-your-tests/" class="">
+            Run Your Tests
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/quickstart/generate-report/" class="">
+            Generate Report
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/">
+            Integration
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/junit4/" class="">
+            jUnit 4
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/testng/" class="">
+            TestNG
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/mstest/" class="">
+            MSTest
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/nose/" class="">
+            Nose
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/nunit/" class="">
+            NUnit
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item active">
+        
+        <a href="/allure/1.4/integration/phpunit/" class="">
+            PHPUnit
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/pytest/" class="">
+            Pytest
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/rspec/" class="">
+            RSpec
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/scalatest/" class="">
+            Scaltest
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/specs/" class="">
+            Specs
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/spock/" class="">
+            Spock
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/codeception/" class="">
+            Codeception
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/cucumber/" class="">
+            Cucumber
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/cucumberjs/" class="">
+            Cucumber JS
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/cucumberjvm/" class="">
+            Cucumber JVM
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/jasmine/" class="">
+            Jasmine
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/karma/" class="">
+            Karma
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/integration/mocha/" class="">
+            Mocha
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/">
+            Reporting
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/commandline/" class="">
+            Commandline
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/teamcity/" class="">
+            TeamCity
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/jenkins/" class="">
+            Jenkins
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/bamboo/" class="">
+            Bamboo
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/maven/" class="">
+            Maven
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/reporting/gradle/" class="">
+            Gradle
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/">
+            Main features
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/steps/" class="">
+            Steps
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/attachments/" class="">
+            Attachments
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/features_and_stories/" class="">
+            Features and Stories
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/parameters/" class="">
+            Parameters
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/environment/" class="">
+            Environment
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/issues/" class="">
+            Issue
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="/allure/1.4/features/testcase_id/" class="">
+            Test Case ID
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="">
+            
+        </a>
+        <ul class="list">
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="" class="">
+            
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="" class="">
+            
+        </a>
+        
+    </li>
+    
+
+    
+    
+
+    <li class="list__item ">
+        
+        <a href="" class="">
+            
+        </a>
+        
+    </li>
+    
+</ul>
+        
+    </li>
+    
+</ul>
+    </ul>
+</div>
+
+</div>
+<div class="docs-body">
+    <h1>PHPUnit</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This an official PHPUnit adapter for Allure Framework - a flexible, lightweight and multi-language framework for writing
+self-documenting tests.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="what-is-this-for">What is this for?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The main purpose of this adapter is to accumulate information about your tests and write it out to a set of XML files:
+one for each test class. Then you can use a standalone command line tool or a plugin for popular continuous integration
+systems to generate an HTML page showing your tests in a good form.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="example-project">Example project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Example project is located at: <a href="https://github.com/allure-framework/allure-phpunit-example" class="bare">https://github.com/allure-framework/allure-phpunit-example</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-to-generate-report">How to generate report</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This adapter only generates XML files containing information about tests. See
+<a href="https://github.com/allure-framework/allure-core/wiki#generating-report">wiki section</a> on how to generate report.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installation-usage">Installation &amp;&amp; Usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Note:</strong> this adapter supports Allure 1.4.x only.
+In order to use this adapter you need to add a new dependency to your <strong>composer.json</strong> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="json">{
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">require</span><span class="delimiter">&quot;</span></span>: {
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">php</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">&gt;=5.4.0</span><span class="delimiter">&quot;</span></span>,
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">allure-framework/allure-phpunit</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">~1.2.0</span><span class="delimiter">&quot;</span></span>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then add Allure test listener in <strong>phpunit.xml</strong> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;listeners&gt;</span>
+    <span class="tag">&lt;listener</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Yandex\Allure\Adapter\AllureAdapter</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">file</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">vendor/allure-framework/allure-phpunit/src/Yandex/Allure/Adapter/AllureAdapter.php</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;arguments&gt;</span>
+            <span class="tag">&lt;string&gt;</span>build/allure-results<span class="tag">&lt;/string&gt;</span> <span class="comment">&lt;!-- XML files output directory --&gt;</span>
+            <span class="tag">&lt;boolean&gt;</span>true<span class="tag">&lt;/boolean&gt;</span> <span class="comment">&lt;!-- Whether to delete previous results on rerun --&gt;</span>
+            <span class="tag">&lt;array&gt;</span> <span class="comment">&lt;!-- A list of custom annotations to ignore (optional) --&gt;</span>
+                <span class="tag">&lt;element</span> <span class="attribute-name">key</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+                    <span class="tag">&lt;string&gt;</span>someCustomAnnotation<span class="tag">&lt;/string&gt;</span>
+                <span class="tag">&lt;/element&gt;</span>
+            <span class="tag">&lt;/array&gt;</span>
+        <span class="tag">&lt;/arguments&gt;</span>
+    <span class="tag">&lt;/listener&gt;</span>
+<span class="tag">&lt;/listeners&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After running PHPUnit tests a new folder will be created (<strong>build/allure-results</strong> in the example above). This folder
+will contain generated XML files. See <a href="https://github.com/allure-framework/allure-core/wiki">framework help</a> for details
+about how to generate report from XML files. By default generated report will only show a limited set of information but
+you can use cool Allure features by adding a minimum of test code changes. Read next section for details.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="main-features">Main features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This adapter comes with a set of PHP annotations and traits allowing to use main Allure features.</p>
+</div>
+<div class="sect2">
+<h3 id="human-readable-test-class-or-test-method-title">Human-readable test class or test method title</h3>
+<div class="paragraph">
+<p>In order to add such title to any test class or <a href="https://github.com/allure-framework/allure-core/wiki/Glossary#test-case">test case</a>
+method you need to annotate it with <strong>@Title</strong> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="php"><span class="keyword">namespace</span> <span class="constant">Example</span>\<span class="constant">Tests</span>;
+
+<span class="keyword">use</span> <span class="constant">PHPUnit_Framework_TestCase</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Annotation</span>\<span class="constant">Title</span>;
+
+<span class="comment">/**
+ * @Title(&quot;Human-readable test class title&quot;)
+ */</span>
+<span class="keyword">class</span> <span class="class">SomeTest</span> <span class="keyword">extends</span> <span class="constant">PHPUnit_Framework_TestCase</span>
+{
+    <span class="comment">/**
+     * @Title(&quot;Human-readable test method title&quot;)
+     */</span>
+    <span class="keyword">public</span> <span class="keyword">function</span> <span class="function">testCase</span>()
+    {
+        <span class="comment">//Some implementation here...</span>
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="extended-test-class-or-test-method-description">Extended test class or test method description</h3>
+<div class="paragraph">
+<p>Similarly you can add detailed description for each test class and <a href="https://github.com/allure-framework/allure-core/wiki/Glossary#test-case">test method</a>.
+To add such description simply use <strong>@Description</strong> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="php"><span class="keyword">namespace</span> <span class="constant">Example</span>\<span class="constant">Tests</span>;
+
+<span class="keyword">use</span> <span class="constant">PHPUnit_Framework_TestCase</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Annotation</span>\<span class="constant">Description</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Model</span>\<span class="constant">DescriptionType</span>;
+
+<span class="comment">/**
+ * @Description(&quot;Detailed description for test class&quot;)
+ */</span>
+<span class="keyword">class</span> <span class="class">SomeTest</span> <span class="keyword">extends</span> <span class="constant">PHPUnit_Framework_TestCase</span>
+{
+    <span class="comment">/**
+     * @Description(value = &quot;Detailed description for &lt;b&gt;test class&lt;/b&gt;.&quot;, type = DescriptionType::HTML)
+     */</span>
+    <span class="keyword">public</span> <span class="keyword">function</span> <span class="function">testCase</span>()
+    {
+        <span class="comment">//Some implementation here...</span>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Description can be added in plain text, HTML or Markdown format - simply assign different <strong>type</strong> value.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="set-test-severity">Set test severity</h3>
+<div class="paragraph">
+<p><strong>@Severity</strong> annotation is used in order to prioritize test methods by severity:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="php"><span class="keyword">namespace</span> <span class="constant">Example</span>\<span class="constant">Tests</span>;
+
+<span class="keyword">use</span> <span class="constant">PHPUnit_Framework_TestCase</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Annotation</span>\<span class="constant">Severity</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Model</span>\<span class="constant">SeverityLevel</span>;
+
+<span class="keyword">class</span> <span class="class">SomeTest</span> <span class="keyword">extends</span> <span class="constant">PHPUnit_Framework_TestCase</span>
+{
+    <span class="comment">/**
+     * @Severity(level = SeverityLevel::MINOR)
+     */</span>
+    <span class="keyword">public</span> <span class="keyword">function</span> <span class="function">testCase</span>()
+    {
+        <span class="comment">//Some implementation here...</span>
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="specify-test-parameters-information">Specify test parameters information</h3>
+<div class="paragraph">
+<p>In order to add information about test method <a href="https://github.com/allure-framework/allure-core/wiki/Glossary#parameter">parameters</a>
+you should use <strong>@Parameter</strong> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="php"><span class="keyword">namespace</span> <span class="constant">Example</span>\<span class="constant">Tests</span>;
+
+<span class="keyword">use</span> <span class="constant">PHPUnit_Framework_TestCase</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Annotation</span>\<span class="constant">Parameter</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Model</span>\<span class="constant">ParameterKind</span>;
+
+<span class="keyword">class</span> <span class="class">SomeTest</span> <span class="keyword">extends</span> <span class="constant">PHPUnit_Framework_TestCase</span>
+{
+    <span class="comment">/**
+     * @Parameter(name = &quot;param1&quot;, value = &quot;value1&quot;)
+     * @Parameter(name = &quot;param2&quot;, value = &quot;value2&quot;, kind = ParameterKind::SYSTEM_PROPERTY)
+     */</span>
+    <span class="keyword">public</span> <span class="keyword">function</span> <span class="function">testCase</span>()
+    {
+        <span class="comment">//Some implementation here...</span>
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="map-test-classes-and-test-methods-to-features-and-stories">Map test classes and test methods to features and stories</h3>
+<div class="paragraph">
+<p>In some development approaches tests are classified by <a href="https://github.com/allure-framework/allure-core/wiki/Glossary#user-story">stories</a>
+and <a href="https://github.com/allure-framework/allure-core/wiki/Glossary#feature">features</a>. If you&#8217;re using this then you can
+annotate your test with <strong>@Stories</strong> and <strong>@Features</strong> annotations:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="php"><span class="keyword">namespace</span> <span class="constant">Example</span>\<span class="constant">Tests</span>;
+
+<span class="keyword">use</span> <span class="constant">PHPUnit_Framework_TestCase</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Annotation</span>\<span class="constant">Features</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Annotation</span>\<span class="constant">Stories</span>;
+
+<span class="comment">/**
+ * @Stories({&quot;story1&quot;, &quot;story2&quot;})
+ * @Features({&quot;feature1&quot;, &quot;feature2&quot;, &quot;feature3&quot;})
+ */</span>
+<span class="keyword">class</span> <span class="class">SomeTest</span> <span class="keyword">extends</span> <span class="constant">PHPUnit_Framework_TestCase</span>
+{
+    <span class="comment">/**
+     * @Features({&quot;feature2&quot;})
+     * @Stories({&quot;story1&quot;})
+     */</span>
+    <span class="keyword">public</span> <span class="keyword">function</span> <span class="function">testCase</span>()
+    {
+        <span class="comment">//Some implementation here...</span>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will then be able to filter tests by specified features and stories in generated Allure report.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="attach-files-to-report">Attach files to report</h3>
+<div class="paragraph">
+<p>If you wish to <a href="https://github.com/allure-framework/allure-core/wiki/Glossary#attachment">attach some files</a> generated
+during PHPUnit run (screenshots, log files, dumps and so on) to report - then you need to use <strong>AttachmentSupport</strong>
+trait in your test class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="php"><span class="keyword">namespace</span> <span class="constant">Example</span>\<span class="constant">Tests</span>;
+
+<span class="keyword">use</span> <span class="constant">PHPUnit_Framework_TestCase</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Support</span>\<span class="constant">AttachmentSupport</span>;
+
+<span class="keyword">class</span> <span class="class">SomeTest</span> <span class="keyword">extends</span> <span class="constant">PHPUnit_Framework_TestCase</span>
+{
+
+    <span class="keyword">use</span> <span class="constant">AttachmentSupport</span>;
+
+    <span class="keyword">public</span> <span class="keyword">function</span> <span class="function">testCase</span>()
+    {
+        <span class="comment">//Some implementation here...</span>
+        <span class="local-variable">$filePath</span> = <span class="local-variable">$this</span>-&gt;outputSomeContentToTemporaryFile();
+        <span class="local-variable">$this</span>-&gt;addAttachment(<span class="local-variable">$filePath</span>, <span class="string"><span class="delimiter">'</span><span class="content">Attachment human-readable name</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">text/plain</span><span class="delimiter">'</span></span>);
+        <span class="comment">//Some implementation here...</span>
+    }
+
+    <span class="keyword">private</span> <span class="keyword">function</span> <span class="function">outputSomeContentToTemporaryFile</span>()
+    {
+        <span class="local-variable">$tmpPath</span> = <span class="predefined">tempnam</span>(sys_get_temp_dir(), <span class="string"><span class="delimiter">'</span><span class="content">test</span><span class="delimiter">'</span></span>);
+        <span class="predefined">file_put_contents</span>(<span class="local-variable">$tmpPath</span>, <span class="string"><span class="delimiter">'</span><span class="content">Some content to be outputted to temporary file.</span><span class="delimiter">'</span></span>);
+        <span class="keyword">return</span> <span class="local-variable">$tmpPath</span>;
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In order to create an <a href="https://github.com/allure-framework/allure-core/wiki/Glossary#attachment">attachment</a> simply call
+<strong>AttachmentSupport::addAttachment()</strong> method. This method accepts attachment type, human-readable name and a string
+either storing full path to the file we need to attach or file contents.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="divide-test-methods-into-steps">Divide test methods into steps</h3>
+<div class="paragraph">
+<p>Allure framework also supports very useful feature called <a href="https://github.com/allure-framework/allure-core/wiki/Glossary#test-step">steps</a>.
+Consider a test method which has complex logic inside and several assertions. When an exception is thrown or one of
+assertions fails sometimes it&#8217;s very difficult to determine which one caused the failure. Allure steps allow to divide
+test method logic into several isolated pieces having independent run statuses such as <strong>passed</strong> or <strong>failed</strong>. This
+allows to have much more cleaner understanding of what really happens. In order to use steps simply import
+<strong>StepSupport</strong> trait in your test class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="php"><span class="keyword">namespace</span> <span class="constant">Example</span>\<span class="constant">Tests</span>;
+
+<span class="keyword">use</span> <span class="constant">PHPUnit_Framework_TestCase</span>;
+<span class="keyword">use</span> <span class="constant">Yandex</span>\<span class="constant">Allure</span>\<span class="constant">Adapter</span>\<span class="constant">Support</span>\<span class="constant">StepSupport</span>;
+
+<span class="keyword">class</span> <span class="class">SomeTest</span> <span class="keyword">extends</span> <span class="constant">PHPUnit_Framework_TestCase</span>
+{
+
+    <span class="keyword">use</span> <span class="constant">StepSupport</span>;
+
+    <span class="keyword">public</span> <span class="keyword">function</span> <span class="function">testCase</span>()
+    {
+        <span class="comment">//Some implementation here...</span>
+        <span class="local-variable">$this</span>-&gt;executeStep(<span class="string"><span class="delimiter">&quot;</span><span class="content">This is step one</span><span class="delimiter">&quot;</span></span>, <span class="keyword">function</span> () {
+            <span class="local-variable">$this</span>-&gt;stepOne();
+        });
+
+        <span class="local-variable">$this</span>-&gt;executeStep(<span class="string"><span class="delimiter">&quot;</span><span class="content">This is step two</span><span class="delimiter">&quot;</span></span>, <span class="keyword">function</span> () {
+            <span class="local-variable">$this</span>-stepTwo();
+        });
+
+        <span class="local-variable">$this</span>-&gt;executeStep(<span class="string"><span class="delimiter">&quot;</span><span class="content">This is step three</span><span class="delimiter">&quot;</span></span>, <span class="keyword">function</span> () {
+            <span class="local-variable">$this</span>-&gt;stepThree(<span class="string"><span class="delimiter">'</span><span class="content">someArgument</span><span class="delimiter">'</span></span>);
+        });
+        <span class="comment">//Some implementation here...</span>
+    }
+
+    <span class="keyword">private</span> <span class="keyword">function</span> <span class="function">stepOne</span>()
+    {
+        <span class="comment">//Some implementation here...</span>
+    }
+
+    <span class="keyword">private</span> <span class="keyword">function</span> <span class="function">stepTwo</span>()
+    {
+        <span class="comment">//Some implementation here...</span>
+    }
+
+    <span class="keyword">private</span> <span class="keyword">function</span> <span class="function">stepThree</span>(<span class="local-variable">$argument</span>)
+    {
+        <span class="comment">//Some implementation here...</span>
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The entire test method execution status will depend on every step but information about steps status will be stored separately.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+</footer>
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40262569 = new Ya.Metrika({ id:40262569, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40262569" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</body>
+
+</html>
