@@ -5,10 +5,12 @@
 @import "coderay";
 
 body {
-  padding-left: 300px;
-
   font-family: "Noto Serif","DejaVu Serif",serif;
   font-size: 16px;
+}
+
+.docs-sidebar {
+  padding: 0 20px;
 }
 
 .docs-body {
@@ -19,38 +21,51 @@ body {
   margin: 0 auto;
 }
 
-.docs-sidebar {
-  margin-top: 0 !important;
-  position: fixed;
-  display: block;
+@media only screen and (max-width: 748px) {
+  body {
+    padding-left: 300px;
+  }
 
-  bottom: 0;
-  left: 0;
-  top: 0;
+  .docs-sidebar {
 
-  z-index: 1;
+    margin-top: 0 !important;
+    padding: 0 20px;
 
-  overflow-y: auto;
-  width: 300px;
+    position: fixed;
+    display: block;
 
-  border-right: 1px solid rgba(0, 0, 0, .07);
-  background: #f8f8f7;
+    bottom: 0;
+    left: 0;
+    top: 0;
+
+    z-index: 1;
+
+    overflow-y: auto;
+    width: 300px;
+
+    border-right: 1px solid rgba(0, 0, 0, .07);
+    background: #f8f8f7;
+  }
 }
 
 .list {
   padding: 0;
-  margin-left: 20px;
-
+  margin-left: 0;
   list-style-type: none;
 
   &__item {
+
     > a {
       text-decoration: none;
       padding: 3px 0;
       display: block;
     }
 
-    & .active > a {
+    > ul {
+      margin-left: 20px;
+    }
+
+    &.active>a {
       color: #a53221;
     }
   }
