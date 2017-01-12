@@ -5,11 +5,11 @@
 :page-product: allure
 :source-highlighter: coderay
 
-= Allure Cucumber-JVM Adaptor (JUnit)
+== Allure Cucumber-JVM Adaptor (JUnit)
 
 This adaptor allows to generate allure xml reports after cucumber-jvm Junit test execution.
 
-== Example project
+=== Example project
 
 Example project is located at: https://github.com/allure-examples/allure-cucumber-jvm-example
 

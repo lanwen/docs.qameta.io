@@ -162,9 +162,9 @@ WARNING: code snippet TBD
 * Add ability to use reflection for decoration method of page objects so that we don't need to write
  Allure-related boilerplate tying ourselves to one specific reporter.
 
-= For Developers
+== For Developers
 
 See the https://github.com/allure-framework/allure-jasmine-plugin/blob/master/test/system[system tests]
- to quickly check how the reporter works in real life:
+to quickly check how the reporter works in real life:
 
 `node_modules/protractor/bin/protractor ./test/system/conf.js`
