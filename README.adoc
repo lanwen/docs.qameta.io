@@ -1,5 +1,31 @@
 = Qameta Documentation
 
-* gem install bundler
-* bundle install
-* bundle exec jekyll serve
+This repository powers docs.qameta.io, which includes documentation for the following Qameta projects:
+
+* https://github.com/allure-framework[Allure]
+
+== Requirements
+
+We use Jekyll, an open source static site generator, to build our documentation.
+Check out the https://jekyllrb.com[Jekyll] website for installation instructions.
+
+=== Style Requirements
+
+==== AsciiDoc
+
+All of our documentation is written in http://asciidoctor.org[AsciiDoc]. If you're not a Markdown expert but you
+have content to contribute, feel free to submit a PR and we'll help you out with the formatting.
+
+==== Writing Style
+
+In general, we try to keep our writing style approachable and easy to understand.
+
+== Contributing
+Qameta's documentation is open source. We strongly encourage (and value!) any contributions from the community.
+
+Contributions include:
+
+* General content improvement: typo fixes and sentence clarifications
+* New content: documentation for new features and guides for common use cases
+
+Please feel free to open an issue or a pull request. See the Contributing Guide for more information.
