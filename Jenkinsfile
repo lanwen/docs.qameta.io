@@ -2,6 +2,16 @@ node('ruby') {
 
     stage('Checkout') {
         checkout scm
+
+        dir ('_site') {
+            checkout([
+                $class: 'GitSCM',
+                branches: [[name: 'gh-pages']],
+                extensions: scm.extensions,
+                userRemoteConfigs: scm.userRemoteConfigs,
+                doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations
+            ])
+        }
     }
 
     stage('Dependencies') {
