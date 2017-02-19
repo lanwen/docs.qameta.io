@@ -26,6 +26,7 @@ exclude:
   - Gemfile
   - Jenkinsfile
   - README
+  - vendor
 
 metrcs:
   yandex: "38078235"

@@ -6,6 +6,6 @@ node('ruby') {
     sh 'echo $PATH'
 
     sh 'gem install bundler'
-    sh 'bundle update'
+    sh 'bundle update -path vendor'
     sh 'bundle exec jekyll build'
 }
