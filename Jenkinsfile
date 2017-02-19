@@ -1,7 +1,6 @@
-node('docker') {
+node('ruby') {
     checkout scm
-
-    docker.image('ruby').inside {
-        sh 'ls -all'
-    }
+    sh 'gem install bundler'
+    sh 'bundle update'
+    sh 'bundle exec jekyll build'
 }
