@@ -1,11 +1,19 @@
 node('ruby') {
-    checkout scm
 
-    env.PATH="/usr/local/rvm/rubies/ruby/bin:${env.PATH}"
+    stage('Checkout') {
+        checkout scm
+    }
 
-    sh 'echo $PATH'
+    stage('Dependencies') {
+        sh 'gem install bundler'
+        sh 'bundle install --path vendor'
+    }
 
-    sh 'gem install bundler'
-    sh 'bundle install --path vendor'
-    sh 'bundle exec jekyll build'
+    stage('Build') {
+        sh 'bundle exec jekyll build'
+    }
+
+    stage('Upload') {
+
+    }
 }
