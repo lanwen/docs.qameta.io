@@ -1,5 +1,7 @@
 node('docker') {
-    stage('checkout') {
-        echo scm
+    checkout scm
+
+    docker.image('ruby').inside {
+        sh 'ls -all'
     }
 }
