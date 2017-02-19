@@ -1,4 +1,4 @@
-node('default') {
+node('docker') {
     stage('checkout') {
         echo scm
     }
