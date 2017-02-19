@@ -12,6 +12,7 @@ kramdown:
   coderay_css: class
 
 permalink: pretty
+encoding: utf-8
 
 sass:
   style: compressed
