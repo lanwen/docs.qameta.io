@@ -1,7 +1,7 @@
 node('ruby') {
     checkout scm
 
-    env.PATH="//usr/local/rvm/rubies/ruby/bin:${env.PATH}"
+    env.PATH="/usr/local/rvm/rubies/ruby/bin:${env.PATH}"
 
     sh 'echo $PATH'
 
