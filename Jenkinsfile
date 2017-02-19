@@ -4,11 +4,9 @@ node('ruby') {
 
     dir('_site') {
         checkout([
-                $class                           : 'GitSCM',
-                branches                         : [[name: 'gh-pages']],
-                extensions                       : scm.extensions,
-                userRemoteConfigs                : scm.userRemoteConfigs,
-                doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations
+                $class           : 'GitSCM',
+                branches         : [[name: 'gh-pages']],
+                userRemoteConfigs: scm.userRemoteConfigs,
         ])
     }
 
