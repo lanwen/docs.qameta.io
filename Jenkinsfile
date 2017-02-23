@@ -5,10 +5,7 @@ node('ruby') {
     checkout([$class           : 'GitSCM',
               branches         : [[name: 'gh-pages']],
               extensions       : [[$class: 'RelativeTargetDirectory', relativeTargetDir: '_site']],
-              submoduleCfg     : [],
-              userRemoteConfigs: [
-                      [credentialsId: 'qameta-ci', url: scm.getUserRemoteConfigs()[0].getUrl()]
-              ]
+              userRemoteConfigs: scm.userRemoteConfigs
     ])
 
     sh 'gem install bundler'
