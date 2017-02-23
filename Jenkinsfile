@@ -8,7 +8,7 @@ node('ruby') {
               userRemoteConfigs: scm.userRemoteConfigs
     ])
 
-    withEnv(['PATH=/usr/local/rvm/rubies/ruby/bin:$PATH']) {
+    withEnv(['PATH+RUBY=/usr/local/rvm/rubies/ruby/bin']) {
         sh 'echo $PATH'
         sh 'gem install bundler'
         sh 'bundle install --path vendor'
