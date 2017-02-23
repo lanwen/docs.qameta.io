@@ -14,4 +14,11 @@ node('ruby') {
         sh 'bundle install --path vendor'
         sh 'bundle exec jekyll build'
     }
+
+    dir('_site') {
+        sh 'git add -A'
+        sh 'git commit -m \"Update gh-pages\"'
+        sh 'git push origin gh-pages'
+    }
+
 }
