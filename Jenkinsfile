@@ -1,5 +1,5 @@
 pipeline {
-    agent 'ruby'
+    agent { label 'ruby' }
     stages {
         stage('build') {
             steps {
