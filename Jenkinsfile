@@ -8,8 +8,10 @@ node('ruby') {
               userRemoteConfigs: scm.userRemoteConfigs
     ])
 
-    sh 'echo $PATH'
-    sh 'gem install bundler'
-    sh 'bundle install --path vendor'
-    sh 'bundle exec jekyll build'
+    withEnv(['PATH=/usr/local/rvm/rubies/ruby/bin:$PATH']) {
+        sh 'echo $PATH'
+        sh 'gem install bundler'
+        sh 'bundle install --path vendor'
+        sh 'bundle exec jekyll build'
+    }
 }
