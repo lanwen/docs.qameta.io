@@ -5,7 +5,7 @@
 @import "coderay";
 
 body {
-  font-family: "Noto Serif","DejaVu Serif",serif;
+  font-family: "Noto Serif", "DejaVu Serif", serif;
   font-size: 16px;
 }
 
@@ -21,7 +21,7 @@ body {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 748px) {
+@media only screen and (min-width: 748px) {
   body {
     padding-left: 300px;
   }
@@ -65,7 +65,7 @@ body {
       margin-left: 20px;
     }
 
-    &.active>a {
+    &.active > a {
       color: #a53221;
     }
   }
