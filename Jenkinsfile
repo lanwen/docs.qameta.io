@@ -1,24 +1,15 @@
-node('ruby') {
-
-    checkout scm
-
-    checkout([$class           : 'GitSCM',
-              branches         : [[name: 'gh-pages']],
-              extensions       : [[$class: 'RelativeTargetDirectory', relativeTargetDir: '_site']],
-              userRemoteConfigs: scm.userRemoteConfigs
-    ])
-
-    withEnv(['PATH+RUBY=/usr/local/rvm/rubies/ruby/bin']) {
-        sh 'echo $PATH'
-        sh 'gem install bundler'
-        sh 'bundle install --path vendor'
-        sh 'bundle exec jekyll build'
+pipeline {
+    agent 'ruby'
+    stages {
+        stage('build') {
+            steps {
+                withEnv(['PATH+RUBY=/usr/local/rvm/rubies/ruby/bin']) {
+                    sh 'echo $PATH'
+                    sh 'gem install bundler'
+                    sh 'bundle install --path vendor'
+                    sh 'bundle exec jekyll build'
+                }
+            }
+        }
     }
-
-    dir('_site') {
-        sh 'git add -A'
-        sh 'git commit -m \"Update gh-pages\"'
-        sh 'git push origin gh-pages'
-    }
-
 }
