@@ -2,13 +2,14 @@ node('ruby') {
 
     checkout scm
 
-    dir('_site') {
-        checkout([
-                $class           : 'GitSCM',
-                branches         : [[name: 'gh-pages']],
-                userRemoteConfigs: scm.userRemoteConfigs,
-        ])
-    }
+    checkout([$class           : 'GitSCM',
+              branches         : [[name: 'gh-pages']],
+              extensions       : [[$class: 'RelativeTargetDirectory', relativeTargetDir: '_site']],
+              submoduleCfg     : [],
+              userRemoteConfigs: [
+                      [credentialsId: 'qameta-ci', url: scm.getUserRemoteConfigs()[0].getUrl()]
+              ]
+    ])
 
     sh 'gem install bundler'
     sh 'bundle install --path vendor'
