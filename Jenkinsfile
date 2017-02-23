@@ -3,8 +3,10 @@ pipeline {
     stages {
 
         stage('Checkout gh-pages branch') {
-            sh 'git worktree add -B gh-pages _site origin/gh-pages'
-            sh 'rm -rf _site/*'
+            steps {
+                sh 'git worktree add -B gh-pages _site origin/gh-pages'
+                sh 'rm -rf _site/*'
+            }
         }
 
         stage('Build site') {
@@ -18,8 +20,10 @@ pipeline {
             }
         }
         stage('Publish site') {
-            dir('_site') {
-                sh 'git add --all && git commit -m "Publishing to gh-pages" && git push'
+            steps {
+                dir('_site') {
+                    sh 'git add --all && git commit -m "Publishing to gh-pages" && git push'
+                }
             }
         }
     }
